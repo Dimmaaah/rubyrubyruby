@@ -1,16 +1,23 @@
 <h1 class="top-developers">Top Developers of the month</h1>
 
 
+
+
+
+
 <section class="cards">
-  <ul class="cards__list">
+  <ul class="cards__list"><% @developers.each do |developer| %>
+    <%= link_to developer_path(developer) do%>
     <li id="slide-card-1" class="card">
       <blockquote>
-        <%= image_tag "profile.jpg", class:"avatar_developer" %>
-      <cite>1-Jonathan Swift</cite>
+
+      <cite><%= "#{developer.first_name} #{developer.last_name}" %></cite>
       </blockquote>
     </li>
+    <% end %>
+    <% end %>
 
-    <li id="slide-card-2" class="card">
+   <!--  <li id="slide-card-2" class="card">
       <blockquote>
         <%= image_tag "profile.jpg", class:"avatar_developer" %>
         <cite>2- Sir Walter Scott</cite>
@@ -71,7 +78,7 @@
         <%= image_tag "profile.jpg", class:"avatar_developer" %>
         <cite>10-Sir Walter Scott</cite>
       </blockquote>
-    </li>
+    </li> -->
   </ul>
 </section>
 
