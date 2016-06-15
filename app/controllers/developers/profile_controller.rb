@@ -1,6 +1,6 @@
 class Developers::ProfileController < ApplicationController
 def index
-  @profile = Profile.all
+  @users = User.all
 end
 
 def new
