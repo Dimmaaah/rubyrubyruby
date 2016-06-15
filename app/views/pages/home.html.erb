@@ -1,8 +1,98 @@
-<h1>Home Page</h1>
-<p>
+<div class='landing' ng-controller='IndexCtrl as ic' ng-init='initialSet()'>
+  <div class='landing ruby-background'>
+    <div class='with-search-form'>
+      <div class='headerBlock'>
+        <div class='hero-unit'>
+         <form action="searchform" class="navbar-wagon-search">
+          <input type="text" class="navbar-wagon-search-input" placeholder="Search something">
+          <button type="submit" class="navbar-wagon-search-btn">
+            <i class="fa fa-search"></i>
+          </button>
+        </form>
+        <center>
+          <h1 class='headTitle'>
+            RubyRubyRuby
+          </h1>
+        </center>
+      </div>
+    </div>
+  </div>
+</div>
 
+<div class= 'top-developers'>
+  <h1 class="top-developers">Top Developers of the month</h1>
+  <section class="cards">
+   <ul class="cards__list">
+     <li id="slide-card-1" class="card">
 
+       <blockquote>
+       <%= image_tag "business-avatar.png", class:"avatar_developer" %>
+         <cite>1-Jonathan Swift</cite>
+       </blockquote>
 
+     </li>
+     <li id="slide-card-2" class="card">
+       <blockquote>
+       <%= image_tag "business-avatar.png", class:"avatar_developer" %>
+         <cite>2- Sir Walter Scott</cite>
+       </blockquote>
 
+     </li>
+     <li id="slide-card-3" class="card">
+       <blockquote>
+       <%= image_tag "business-avatar.png", class:"avatar_developer" %>
+         <cite>3- Sir Walter Scott</cite>
+       </blockquote>
 
-</p>
+     </li>
+     <li id="slide-card-4" class="card">
+       <blockquote>
+       <%= image_tag "business-avatar.png", class:"avatar_developer" %>
+         <cite>4-Sir Walter Scott</cite>
+       </blockquote>
+     </li>
+
+     <li id="slide-card-4" class="card">
+       <blockquote>
+       <%= image_tag "business-avatar.png", class:"avatar_developer" %>
+         <cite>5- Sir Walter Scott</cite>
+       </blockquote>
+     </li>
+
+     <li id="slide-card-4" class="card">
+       <blockquote>
+       <%= image_tag "business-avatar.png", class:"avatar_developer" %>
+         <cite>6- Sir Walter Scott</cite>
+       </blockquote>
+     </li>
+
+     <li id="slide-card-4" class="card">
+       <blockquote>
+       <%= image_tag "business-avatar.png", class:"avatar_developer" %>
+         <cite>7- Sir Walter Scott</cite>
+       </blockquote>
+     </li>
+
+     <li id="slide-card-4" class="card">
+       <blockquote>
+       <%= image_tag "business-avatar.png", class:"avatar_developer" %>
+         <cite>8- Sir Walter Scott</cite>
+       </blockquote>
+     </li>
+
+     <li id="slide-card-4" class="card">
+       <blockquote>
+       <%= image_tag "business-avatar.png", class:"avatar_developer" %>
+         <cite>9-Sir Walter Scott</cite>
+       </blockquote>
+     </li>
+
+     <li id="slide-card-4" class="card">
+       <blockquote>
+       <%= image_tag "business-avatar.png", class:"avatar_developer" %>
+         <cite>10-Sir Walter Scott</cite>
+       </blockquote>
+     </li>
+   </ul>
+ </section>
+</div>

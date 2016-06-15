@@ -1,3 +1,146 @@
 // Place all the styles related to the developers controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.top-developers {
+  text-align:center;
+  padding-bottom: 20px;
+}
+
+.avatar_profile{
+
+  width:170px;
+  height: 170px;
+}
+
+.avatar_developer {
+  border-radius: 50%;
+  width:80px;
+  height: 80px;
+}
+
+
+@mixin clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+
+body {
+  background: #f5f5f5;
+}
+
+$card-width: 670px;
+$card-gap: 30px;
+$card-total-width: $card-width + $card-gap;
+$cards-quantity: 4;
+$cards-speed: 50s;
+
+.cards {
+  overflow: hidden;
+  .cards__list {
+    display: flex;
+    align-items: stretch;
+    align-content: center;
+    align-self: center;
+    width: $card-total-width * $cards-quantity;
+    padding: 0;
+    @include clearfix;
+
+    &:hover .card{
+      -webkit-animation-play-state:paused;
+      -moz-animation-play-state:paused;
+      animation-play-state:paused;
+    }
+
+    li {
+      float: left;
+    }
+  }
+  .card {
+    width: $card-width;
+    animation-duration: $cards-speed;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    text-align: center;
+    margin: 0 $card-gap 0 0;
+    $card-padding: 20px;
+    overflow: hidden;
+    background: #fff;
+    padding: $card-padding;
+
+    & > a {
+      color: inherit !important;
+    }
+
+
+    blockquote {
+      padding: .5em 1.5em;
+      font-size: 2rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 1.3em;
+      margin: 0;
+
+      cite {
+        display: block;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-style: normal;
+      }
+    }
+  }
+}
+
+// Creating animations for each cards
+$i: $cards-quantity;
+@while $i > 0 {
+  #slide-card-#{$i} {
+    animation-name: cardslide-#{$i};
+  }
+
+  @-webkit-keyframes cardslide-#{$i} {
+
+    // Creating percentages based on cards quantity
+    $j: $cards-quantity;
+    $moved: false;
+    @while $j > 0 {
+      $percentage: (100 / $cards-quantity) * ($cards-quantity - $j);
+
+      @if $moved == false {
+        #{$percentage}% {
+          transform: translateX(- $card-total-width * ($cards-quantity - $j));
+        }
+        @if ($cards-quantity - $j) == $i {
+          #{$percentage + 0.01}% {
+            transform: translateX($card-total-width * ($cards-quantity - ($cards-quantity - $j)));
+          }
+          $moved: true;
+        }
+      } @else {
+        #{$percentage}% {
+          transform: translateX($card-total-width * $j);
+        }
+      }
+
+      $j: $j - 1;
+    }
+    @if $i == $cards-quantity {
+      99.99% {
+        transform: translateX(- $cards-quantity * $card-total-width);
+      }
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  $i: $i - 1;
+}
