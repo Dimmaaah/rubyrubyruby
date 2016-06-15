@@ -1,6 +1,31 @@
 Rails.application.routes.draw do
   devise_for :users
+  devise_for :employers
+
   root to: 'pages#home'
+
+  # ====================public interface ============================
+  resources :developers, only: [:index, :show]
+
+  resources :jobs, only: [:show, :index] do
+    resources :applications, only: [:new, :create]
+  end
+
+  # ============== employer interface ====================
+  namespace :employers do
+    resources :jobs
+    resources :applications, only: [:index, :show]
+  end
+
+  # ============== developer interface ====================
+  namespace :developers do
+    resource :profile, only: [:show, :edit, :update]
+    resources :applications, only: [:index, :show]
+  end
+
+
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

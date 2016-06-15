@@ -1,0 +1,2 @@
+module Employers::ApplicationsHelper
+end
