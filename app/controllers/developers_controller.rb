@@ -1,17 +1,11 @@
 class DevelopersController < ApplicationController
-<<<<<<< HEAD
+  skip_before_action :authenticate_user!
 
   def index
-    @developers = Developer.first(10)
+    @developers = User.joins(:resume).first(10)
   end
 
   def show
-    @developer = Developer.find(params[:id])
-=======
-def index
-  @users = User.all
-end
-
-
->>>>>>> 1fe8d01a0936ee37351857a0b3422ec5505130a6
+    @developer = User.joins(:resume).find(params[:id])
+  end
 end
