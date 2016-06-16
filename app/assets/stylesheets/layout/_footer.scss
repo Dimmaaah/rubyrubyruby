@@ -1,1 +1,79 @@
-// Your footer style
+#main-footer {
+  background: #2184B2;
+}
+
+#main-footer p{
+  font-size:14px;
+  line-height:25px;
+  margin-top:20px;
+}
+
+// #main-footer hr{
+//   margin-top:20px;
+//   border-color:#19191d;
+//   max-width: 1170px;
+// }
+// hr {
+//   margin-top: 20px;
+//   margin-bottom: 20px;
+//   border: 0;
+//   height: 2px;
+//   border-top: 1px solid #eee;
+//   border-bottom: 1px solid #eee;
+// }
+p {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+p {
+  margin: 0 0 10px;
+}
+.section-header {
+    margin-bottom: 80px;
+}
+.section-header h1 {
+    font-size: 48px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+}
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.social-links {
+  list-style:none;
+  margin:0;
+  padding:0;
+  margin-bottom:15px;
+  margin-top: 15px;
+}
+
+.social-links li{
+  display:inline-block;
+  margin:0 5px;
+  border-radius:3px;
+  box-shadow:0 4px 0 transparent;
+}
+
+.social-links li a {
+  display:block;
+  background:#38A5DB;
+  color:#fff;
+  font-size:18px;
+  width:40px;
+  height:40px;
+  line-height:40px;
+  text-align:center;
+  background:rgba(0,0,0,0.2);
+  border-radius:50%;
+}
+
+.social-links li a:hover {
+  background:#38A5DB;
+}
