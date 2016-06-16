@@ -1,0 +1,8 @@
+<h1>Here employers can upload a vacancy </h1>
+<%= simple_form_for [:employers, @job] do |f| %>
+  <%= f.input :job_title %>
+  <%= f.input :description %>
+  <%= f.input :location %>
+  <%= f.input :salary %>
+  <%= f.button :submit %>
+<% end %>
