@@ -49,6 +49,8 @@ GEM
     bootstrap-sass (3.3.6)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
+    bootstrap-social-rails (4.12.0)
+      railties (>= 3.1)
     builder (3.2.2)
     byebug (9.0.5)
     coderay (1.1.1)
@@ -189,6 +191,7 @@ DEPENDENCIES
   better_errors
   binding_of_caller
   bootstrap-sass
+  bootstrap-social-rails
   devise
   figaro
   font-awesome-sass
@@ -209,5 +212,8 @@ DEPENDENCIES
   spring
   uglifier
 
+RUBY VERSION
+   ruby 2.3.0p0
+
 BUNDLED WITH
-   1.12.3
+   1.12.5
