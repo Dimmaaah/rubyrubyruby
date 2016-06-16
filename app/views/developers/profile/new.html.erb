@@ -1,0 +1,10 @@
+<h1>Here is where you create an online resume</h1>
+
+
+<%= simple_form_for [:developer, @profile], [:] do |f| %>
+  <%= f.input :phone %>
+  <%= f.input :summary %>
+  <%= f.input :linkedin %>
+  <%= f.input :years_of_experience %>
+  <%= f.button :submit %>
+<% end %>
