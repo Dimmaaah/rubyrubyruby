@@ -7,6 +7,18 @@
   padding-bottom: 20px;
 }
 
+.developers-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  flex-direction: column;
+  background-color: #073648;
+  color: rgb(255,255,255);
+  height: 100vh;
+  // text-align: center;
+  // vertical-align: center;
+}
+
 .avatar_profile{
 
   width:170px;
