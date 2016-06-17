@@ -14,5 +14,12 @@
     <%= yield %>
     <%= javascript_include_tag 'application' %>
     <%= render 'shared/footer' %>
+    <script>
+      $(function() {
+        $("#navbar-wagon-menu").click(function() {
+          $(".dropdown-menu").toggle();
+        })
+      })
+    </script>
   </body>
 </html>
