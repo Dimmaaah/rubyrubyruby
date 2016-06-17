@@ -1,6 +1,6 @@
 class Employers::JobsController < ApplicationController
   def index
-
+    @jobs = current_employer.jobs
   end
 
   def new
@@ -9,6 +9,7 @@ class Employers::JobsController < ApplicationController
 
   def create
     @job = Job.new(job_params)
+    @job.employer = current_employer
     @job.save!
     redirect_to employers_job_path(@job)
   end
