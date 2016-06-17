@@ -4,9 +4,10 @@
   <ul class="cards__list"><% @developers.each do |developer| %>
     <%= link_to developer_path(developer) do%>
     <li id="slide-card-1" class="card">
-      <blockquote>
 
+      <blockquote>
         <cite><%= "#{developer.first_name} #{developer.last_name}" %></cite>
+        <p><%= developer.city %></p>
       </blockquote>
     </li>
     <% end %>
@@ -15,4 +16,12 @@
 </section>
 
 
+
+<div class="developers-wrapper">
+      <p>Developers are in the highlight to be be approached by the employers</p>
+      <p>Do not a developer profile yet?</p>
+
+<%= link_to "Sign up", new_user_registration_path, class:"signup" %><br />
+
+</div>
 
