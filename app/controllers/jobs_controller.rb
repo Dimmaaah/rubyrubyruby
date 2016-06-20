@@ -6,7 +6,9 @@ class JobsController < ApplicationController
   end
 
   def show
+    @application = Application.new
     @job = Job.find(params[:id])
+    @employer = @job.employer
   end
 
 
