@@ -1,6 +1,13 @@
 
 <div class="container">
   <h1 class="h1-test">here you'll find the jobs that are created by an employer</h1>
+  <div class="vacancy">
+    <% @job.skills.each do |skill| %>
+      <%= skill.name %>
+    <% end %>
+  </div>
+
+
 <br><br>
   <div class="vacancy">
   <h2> <%= @job.job_title %></h2>

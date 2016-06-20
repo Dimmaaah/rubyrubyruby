@@ -1,11 +1,9 @@
 <h1>these are all your jobs</h1>
 
-
-<% @jobs.each do |job| %>
-<div class="vacancy">
-  <%= job.job_title %>
+  <% @jobs.each do |job| %>
+  <div class="vacancy">
+    <%= job.job_title %>
     <%= job.location %>
-
-</div>
+  </div>
 
 <% end %>
