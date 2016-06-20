@@ -10,14 +10,4 @@ class JobsController < ApplicationController
     @job = Job.find(params[:id])
     @employer = @job.employer
   end
-
-
-
-private
-
-def job_params
-  params.require(:job).permit(:job_title, :salary, :description, :location)
-
-end
-
 end

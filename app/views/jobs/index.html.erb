@@ -1,12 +1,12 @@
 <h1>Apply to these jobs</h1>
 <div class="container">
   <div class="row">
-    <div class="col-xs-offset-2 col-xs-10">
+    <div class="onejob col-xs-offset-2 col-xs-10">
 
       <% @jobs.each do |job| %>
         <%= link_to "#{job.job_title}", job_path(job) %>
         <br>
-          <%= job.location %>
+        <%= job.location %>
       <br>
     </div>
   </div>
