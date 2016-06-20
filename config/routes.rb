@@ -8,13 +8,6 @@ Rails.application.routes.draw do
 
   root to: 'pages#home'
 
-  # ====================public interface ============================
-  resources :developers, only: [:index, :show]
-
-  resources :jobs, only: [:show, :index] do
-    resources :applications, only: [:new, :create]
-  end
-
   # ============== employer interface ====================
   namespace :employers do
     resources :jobs
@@ -26,6 +19,14 @@ Rails.application.routes.draw do
     resources :profile, only: [:show, :edit, :update]
     resources :applications, only: [:index, :show]
   end
+
+  # ====================public interface ============================
+  resources :developers, only: [:index, :show]
+
+  resources :jobs, only: [:show, :index] do
+    resources :applications, only: [:new, :create]
+  end
+
 
 
 
