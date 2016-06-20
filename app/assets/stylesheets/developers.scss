@@ -2,9 +2,54 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //
+.developer-profile{
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  background-color: white;
+  width:800px;
+}
+
+.developer-work {
+  width: 800px;
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
+}
+
+.wrapper-developers {
+  display:flex;
+}
+
+.sideinfo {
+  background-color: #073648;
+  margin:0px auto 31px;
+  color: rgb(255,255,255);
+  max-width:300px;
+  padding:0px 10px;
+}
+
+.developer-name {
+  font-size: 30px;
+  font-weight:3px;
+}
+
+.developer-info {
+  margin-left: 10px;
+}
+
+.info_wrapper{
+  width:inherit;
+}
+
+
+
 .top-developers {
   text-align:center;
   padding-bottom: 20px;
+}
+.card {
+  margin-bottom: 20px;
 }
 
 .developers-wrapper{
@@ -23,6 +68,7 @@
 
   width:170px;
   height: 170px;
+  margin: 0px;
 }
 
 .avatar_developer {
