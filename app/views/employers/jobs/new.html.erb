@@ -4,5 +4,7 @@
   <%= f.input :description %>
   <%= f.input :location %>
   <%= f.input :salary %>
+
+  <%= f.association :skills, collection: @skills %>
   <%= f.button :submit %>
 <% end %>

@@ -1,13 +1,22 @@
-<h1 class="">apply to this job</h1>
-<div class="vacancy">
-  <%= @job.job_title %>
+<div class="container">
+  <h1 class="">apply to this job</h1>
+
+  <div class="vacancy">
+      <h2> <%= @job.job_title %></h2>
+  </div>
+  <div class="vacancy">
+    <%= @job.salary %>
+  </div>
+  <div class="vacancy">
+    <%= @job.description %>
+  </div>
+    <div class="vacancy">
+      <%= @job.location %>
+    </div>
+    <div class="vacancy">
+      <% @job.skills.each do |skill| %>
+    <span class="label label-default"> <%=  skill.name%> </span>
+    <% end %>
 </div>
-<div class="vacancy">
-  <%= @job.salary %>
-</div>
-<div class="vacancy">
-  <%= @job.description %>
-</div>
-<div class="vacancy">
-  <%= @job.location %>
+
 </div>

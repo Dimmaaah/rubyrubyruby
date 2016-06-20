@@ -1,8 +1,13 @@
+<div class="container">
+
+
+
 <h1>Apply to these jobs</h1>
 
 <% @jobs.each do |job| %>
 <div class="vacancy">
-<%= link_to "#{job.job_title}", job_path(job) %> 
+<%= link_to "#{job.job_title}", job_path(job) %>
     <%= job.location %>
 </div>
 <% end %>
+</div>

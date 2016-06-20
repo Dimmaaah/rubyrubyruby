@@ -7,12 +7,15 @@ class Employers::JobsController < ApplicationController
 
   def new
     @job = Job.new
+    @skills = Skill.order(:name)
   end
 
   def create
     @job = Job.new(job_params)
     @job.employer = current_employer
+
     @job.save!
+
     redirect_to employers_job_path(@job)
   end
 
@@ -31,11 +34,15 @@ class Employers::JobsController < ApplicationController
 
   end
 
-private
+  private
 
-def job_params
-  params.require(:job).permit(:job_title, :salary, :description, :location)
-end
-
-
+  def job_params
+    params.require(:job).permit(
+      :job_title,
+      :salary,
+      :description,
+      :location,
+      skill_ids: []
+    )
+  end
 end
