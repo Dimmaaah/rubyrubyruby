@@ -1,9 +1,21 @@
 
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12 col-sm-4">
-      <%= image_tag "profile.jpg", class:"avatar_profile" %>
-    </div>
+<div class="developer-profile">
 
+  <div class="avatar_profile"><%= image_tag "profile.jpg" %></div>
+
+  <div class="developer-info">
+    <div class="developer-name"><%= "#{@developer.first_name} #{@developer.last_name}" %></div>
+    <div class="developer-location"><%= @developer.city %></div>
+    <div class="developer-phone"><%= @developer.resume.phone %></div>
   </div>
+
 </div>
+
+<div class="developer-work">
+  <h1><i class="fa fa-briefcase" aria-hidden="true"></i>Work Experience</h1>
+  <hr>
+  <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i>Education</h1>
+  <hr>
+  <h1><i class="fa fa-line-chart" aria-hidden="true"></i>Projects</h1>
+</div>
+
