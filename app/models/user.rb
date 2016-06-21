@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
+  mount_uploader :photo, PhotoUploader
+
   TEMP_EMAIL_PREFIX = 'change@me'
   TEMP_EMAIL_REGEX = /\Achange@me/
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:linkedin]
@@ -21,7 +23,7 @@ class User < ActiveRecord::Base
    if user.nil?
 
      # Get the existing user by email if the provider gives us a verified email.
-     # If no verified email was provided we assign a temporary email and ask the
+     # If no verified email was provided we assign a temporary email and ask the  r
      # user to verify it on the next step via UsersController.finish_signup
      email_is_verified = auth.info.email && (auth.info.verified || auth.info.verified_email)
      email = auth.info.email if email_is_verified
