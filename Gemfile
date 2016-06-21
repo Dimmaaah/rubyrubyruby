@@ -12,6 +12,7 @@ gem 'devise'
 gem 'redis'
 gem 'cloudinary'
 gem 'carrierwave'
+gem 'cocoon'
 
 gem 'sass-rails'
 gem 'jquery-rails'

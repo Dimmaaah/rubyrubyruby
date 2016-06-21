@@ -6,5 +6,19 @@
   <%= f.input :linkedin %>
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
+  <%= f.association :skills %>
+
+  <h2>Education</h2>
+  <div id="educations">
+    <%= f.simple_fields_for :educations do |education| %>
+      <%= render 'education_fields', f: education %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association 'add education', f, :educations %>
+    </div>
+  </div>
+
+  
   <%= f.submit %>
 <% end %>
+<br><br><br><br><br><br><br><br><br><br><br><br>

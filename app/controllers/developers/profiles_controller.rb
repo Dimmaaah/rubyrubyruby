@@ -40,6 +40,13 @@ class Developers::ProfilesController < ApplicationController
   private
 
   def resume_params
-    params.require(:resume).permit(:summary, :linkedin, :photo, :photo_cache)
+    params.require(:resume).permit(
+      :summary,
+      :linkedin,
+      :photo,
+      :photo_cache,
+      skill_ids: [],
+      educations_attributes: [:id, :name, :school, :start_date, :end_date]
+    )
   end
 end

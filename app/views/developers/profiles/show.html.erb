@@ -17,6 +17,23 @@
   <%= cl_image_tag @resume.photo, height: 300, width: 400, crop: :fill %>
   <%= @resume.summary %>
   <%= @resume.linkedin %>
+
+  <h3>Skills</h3>
+  <ul>
+    <% @resume.skills.each do |skill| %>
+      <li><%= skill.name %></li>
+    <% end %>
+  </ul>
+
+  <h3>Education</h3>
+  <% @resume.educations.each do |education| %>
+    <div>
+      <%= education.name %>
+      <%= education.school %>
+      <%= education.start_date %>
+      <%= education.end_date %>
+    </div>
+  <% end %>
 <% else %>
   <%= link_to "Add your resume", edit_developers_profile_path %>
 <% end %>
