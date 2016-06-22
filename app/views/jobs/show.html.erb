@@ -1,38 +1,13 @@
 <div class="container">
-  <!-- <h1 class="">apply to this job</h1>
-
-  <div class="vacancy">
-      <h2> <%= @job.job_title %></h2>
-  </div>
-  <div class="vacancy">
-    <%= @job.salary %>
-  </div>
-  <div class="vacancy">
-    <%= @job.description %>
-  </div>
-    <div class="vacancy">
-      <%= @job.location %>
-    </div>
-    <div class="vacancy">
-      <% @job.skills.each do |skill| %>
-    <span class="label label-default"> <%=  skill.name%> </span>
-    <% end %>
-</div> -->
   <h1 class="h1">apply to this job</h1>
 
-<div class="card card-block" style="width: 100%;">
-  <h3 class="card-title">  <div class="vacancy">
-        <h2> <%= @job.job_title %></h2>
-    </div></h3>
-  <p class="card-text"  <div class="vacancy">
-    <h4> <%= @job.location %> </h4>
+
+  <div class="vacancy">
+    <h2> <%= @job.job_title %></h2>
+    <h4> <%= @job.location %></h4>
     <h4><%= @job.salary %></h4>
-      <br>
-
-      <%= @job.description %>
-      <br>
-
-    </div></p>
+    <br>
+        <%= @job.description %>
 
   <% if user_signed_in? %>
     <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#myModal">Apply to this job</a>
@@ -48,21 +23,12 @@
         <h4 class="modal-title">Applying to this job</h4>
       </div>
       <div class="modal-body">
-        <p>SHOW YOUR MOTIVATON.
-
-
+        <p>SHOW YOUR MOTIVATON. </p>
             <%= simple_form_for [@job, @application], url: job_applications_path(@job), method: :post do |f| %>
               <%= f.input :description %>
-
               <%= f.button :submit %>
             <% end %>
 
-
-
-
-
-
-        </p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -71,7 +37,5 @@
 
   </div>
 </div>
-</div>
 
-<br><br><br><br><br>
 </div>

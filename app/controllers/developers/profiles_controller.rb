@@ -1,18 +1,6 @@
 class Developers::ProfilesController < ApplicationController
   before_action :authenticate_user!
 
-  def index
-    @users = User.all
-  end
-
-  def new
-    @user = User.new
-  end
-
-  def create
-
-  end
-
   def edit
     @user = current_user
     @resume = current_user.resume || Resume.new
