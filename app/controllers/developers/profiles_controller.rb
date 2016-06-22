@@ -46,7 +46,9 @@ class Developers::ProfilesController < ApplicationController
       :photo,
       :photo_cache,
       skill_ids: [],
-      educations_attributes: [:id, :name, :school, :start_date, :end_date]
+      educations_attributes: [:id, :name, :school, :start_date, :end_date],
+      projects_attributes: [:id, :name, :description],
+      work_experiences_attributes: [:id, :start_date, :end_date, :company_name, :job_title, :description]
     )
   end
 end

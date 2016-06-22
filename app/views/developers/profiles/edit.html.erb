@@ -7,6 +7,7 @@
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
   <%= f.association :skills %>
+  <%= f.input :projects %>
 
   <h2>Education</h2>
   <div id="educations">
@@ -18,7 +19,28 @@
     </div>
   </div>
 
-  
+  <h2>Projects</h2>
+  <div id="projects">
+    <%= f.simple_fields_for :projects do |project| %>
+      <%= render 'project_fields', f: project %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association 'add project', f, :projects %>
+    </div>
+  </div>
+
+  <h2>Work Experience</h2>
+  <div id="work_experiences">
+    <%= f.simple_fields_for :work_experiences do |work_experience| %>
+      <%= render 'work_experience_fields', f: work_experience %>
+    <% end %>
+    <div class="links">
+      <%= link_to_add_association 'add work Experience', f, :work_experiences %>
+    </div>
+  </div>
+
+
+
   <%= f.submit %>
 <% end %>
 <br><br><br><br><br><br><br><br><br><br><br><br>

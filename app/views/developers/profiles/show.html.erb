@@ -34,9 +34,36 @@
       <%= education.end_date %>
     </div>
   <% end %>
+
+  <h3>Projects</h3>
+  <% @resume.projects.each do |project| %>
+    <div>
+      <%= project.name %>
+      <%= project.description %>
+    </div>
+  <% end %>
+
+  <h3>work_experiences</h3>
+  <% @resume.work_experiences.each do |work_experience| %>
+    <div>
+      <%= work_experience.start_date %>
+      <%= work_experience.end_date %>
+      <%= work_experience.company_name %>
+      <%= work_experience.job_title %>
+      <%= work_experience.description %>
+
+    </div>
+  <% end %>
+
+
 <% else %>
   <%= link_to "Add your resume", edit_developers_profile_path %>
 <% end %>
+
+
+
+
+
 </div>
 <br><br><br><br><br><br><br><br><br><br><br><br>
 <!-- Cloudinary::Uploader.upload("SinglePageSample.pdf", :public_id => "single_page_pdf") -->
