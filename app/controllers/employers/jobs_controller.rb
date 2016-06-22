@@ -28,6 +28,7 @@ class Employers::JobsController < ApplicationController
 
   def show
     @job = Job.find(params[:id])
+    @applications = @job.applications
   end
 
   def destroy

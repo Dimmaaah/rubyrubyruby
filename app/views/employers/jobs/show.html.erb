@@ -9,7 +9,13 @@
     <% end %>
   </div>
 
-received applications: ...
+received applications:
+
+<% @applications.each do |application| %>
+  <%= application.user.email %>
+  <div><%= application.description %></div>
+<% end %>
+
 <br><br>
   <div class="vacancy">
   <h2> <%= @job.job_title %></h2>
@@ -27,6 +33,8 @@ received applications: ...
     <% @job.skills.each do |skill| %>
       <%= skill.name %>
     <% end %>
+
+    <br>
 
 
 
