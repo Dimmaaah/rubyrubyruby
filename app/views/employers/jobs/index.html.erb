@@ -1,8 +1,8 @@
+<div class="container">
 <h1>these are all your jobs</h1>
-.<div class="container">
 
 
-  <% @jobs.each do |job| %>
+<% @jobs.each do |job| %>
   <div class="vacancy">
     <%= link_to "#{job.job_title}", employers_job_path(job) %>
     <%= job.job_title %>
