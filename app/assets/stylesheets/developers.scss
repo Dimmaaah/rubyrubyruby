@@ -2,23 +2,84 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //
+.developers-wrapper {
+  width:100%;
+  display:flex;
+}
+
+.developers-avatar {
+  position: absolute;
+  border-radius:50%;
+  width: 150px;
+  height: 150px;
+  top: 15px;
+  left: 10px;
+}
+
+.developers-name {
+  position: absolute;
+  top: 10px;
+  left: 180px;
+}
+
+.developers-city {
+  position: absolute;
+  top: 35px;
+  left: 180px;
+}
+
+.developers-summary {
+  position: absolute;
+  top: 50px;
+  left: 180px;
+}
+
+.developers-skill {
+  position: absolute;
+  left: 180px;
+  top: 130px;
+}
+.badge {
+border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    background-color: #f2f2f2;
+    font-size: 0.8em;
+    padding: 2px 6px 3px;
+    margin-bottom: 4px;
+    font-weight: normal;
+    color:red;
+
+}
+
+.developers-card {
+  position: relative;
+  width: 800px;
+  height: 175px;
+  background-color: white;
+  color: #073648;
+  margin: 0px 15px 10px 25px;
+}
+
 .developer-profile{
   padding: 10px;
-  margin: 10px;
+  margin: 10px 0px 0px 30px;
   display: flex;
   background-color: white;
   width:800px;
+  height:200px;
+  display:flex;
+}
+
+.basic-info {
+  padding-left: 20px;
 }
 
 .developer-work {
   width: 800px;
   background-color: white;
   padding: 10px;
-  margin: 10px;
-}
-
-.wrapper-developers {
-  display:flex;
+  margin: 10px 0px 20px 30px;
 }
 
 .sideinfo {
@@ -52,7 +113,7 @@
   margin-bottom: 20px;
 }
 
-.developers-wrapper{
+.developers-wrapper-signup{
   display: flex;
   justify-content: center;
   align-items:center;
@@ -64,14 +125,14 @@
   // vertical-align: center;
 }
 
-.avatar_profile{
+.profile-avatar{
 
   width:170px;
   height: 170px;
   margin: 0px;
 }
 
-.avatar_developer {
+.avatar_developers {
   border-radius: 50%;
   width:80px;
   height: 80px;
