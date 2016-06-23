@@ -1,15 +1,18 @@
 
 <div class="developer-profile">
 
-  <div class="avatar_profile"><%= image_tag "profile.jpg" %></div>
 
-  <div class="developer-info">
-    <div class="developer-name"><%= "#{@developer.first_name} #{@developer.last_name}" %></div>
-    <div class="developer-location"><%= @developer.city %></div>
-    <div class="developer-phone"><%= @developer.resume.phone %></div>
+  <%= cl_image_tag(@developer.resume.photo, class:"profile-avatar") %>
+
+   <div class="basic-info">
+     <h3><%= "#{@developer.first_name} #{@developer.last_name}" %></h3>
+        <p class = "profile-city"><%= @developer.city %></p>
+        <p class = "profile-email"><%= @developer.email %></p>
+        <p class= profile-phone><%= @developer.resume.phone %></p>
+
+   </div>
   </div>
 
-</div>
 
 <div class="developer-work">
   <h1><i class="fa fa-briefcase" aria-hidden="true"></i>Work Experience</h1>

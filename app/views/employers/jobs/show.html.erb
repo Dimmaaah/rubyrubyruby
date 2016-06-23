@@ -12,6 +12,9 @@
 received applications:
 
 <% @applications.each do |application| %>
+  <%= application.user.first_name %>
+  <%= application.user.last_name %>
+  <br>
   <%= application.user.email %>
   <div><%= application.description %></div>
 <% end %>
