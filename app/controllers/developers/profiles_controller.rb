@@ -1,18 +1,6 @@
 class Developers::ProfilesController < ApplicationController
   before_action :authenticate_user!
 
-  def index
-    @users = User.all
-  end
-
-  def new
-    @user = User.new
-  end
-
-  def create
-
-  end
-
   def edit
     @user = current_user
     @resume = current_user.resume || Resume.new
@@ -23,9 +11,19 @@ class Developers::ProfilesController < ApplicationController
    @resume = current_user.resume
   end
 
+  def user_update
+    @user = current_user
+    if @user.update(user_params)
+      redirect_to developers_profile_path(@user)
+      flash[:notice] = "User succesfully updated"
+    else
+      redirect_to developers_profile_path(@user)
+      flash[:danger] = "Update failed"
+    end
+  end
+
   def update
     @resume = current_user.resume || Resume.new(user: current_user)
-
     if @resume.update(resume_params)
       redirect_to developers_profile_path
     else
@@ -48,7 +46,11 @@ class Developers::ProfilesController < ApplicationController
       skill_ids: [],
       educations_attributes: [:id, :name, :school, :start_date, :end_date],
       projects_attributes: [:id, :name, :description],
-      work_experiences_attributes: [:id, :start_date, :end_date, :company_name, :job_title, :description]
+      work_experiences_attributes: [:id, :start_date, :end_date, :company_name, :job_title, :description],
     )
+  end
+
+  def user_params
+    params.require(:user).permit(:job_title, :birth_date, :city, :street, :photo, :photo_cache)
   end
 end

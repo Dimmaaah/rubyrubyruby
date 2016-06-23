@@ -12,14 +12,15 @@ Rails.application.routes.draw do
   namespace :employers do
     resources :jobs
     resources :applications, only: [:index, :show]
+    resource :profile, only: [:show, :edit, :update]
   end
 
   # ============== developer interface ====================
   namespace :developers do
     resource :profile, only: [:show, :edit, :update] do
-      # member do
-      #   post :resume
-      # end
+      member do
+        post :user_update 
+      end
     end
     resources :applications, only: [:index, :show]
   end

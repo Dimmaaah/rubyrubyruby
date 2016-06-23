@@ -13,6 +13,7 @@ gem 'redis'
 gem 'cloudinary'
 gem 'carrierwave'
 gem 'cocoon'
+gem 'country_select'
 
 gem 'sass-rails'
 gem 'jquery-rails'

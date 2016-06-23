@@ -1,9 +1,18 @@
-here you can find the applications
-<br>
+<div class="container">
+<h1>here you can find the applications</h1>
+<br><br><br>
 
 <% @applications.each do |application| %>
+
+<div class="onejob">
+
+
   <%= application.job_id %>
   <%= application.job.job_title %>
 
 <br>
+</div>
 <%end%>
+
+
+</div>

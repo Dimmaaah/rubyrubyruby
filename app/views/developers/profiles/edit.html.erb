@@ -1,5 +1,5 @@
 <h1>Edition of your resume</h1>
-<%= cl_image_tag @resume.photo, height: 300, width: 400, crop: :fill %>
+<%= cl_image_tag @resume.photo, height: 150, width: 150, crop: :fill %>
 
 <%= simple_form_for @resume, url: developers_profile_path, method: :patch do |f|  %>
   <%= f.input :summary %>
@@ -7,7 +7,7 @@
   <%= f.input :photo %>
   <%= f.input :photo_cache, as: :hidden %>
   <%= f.association :skills %>
-  <%= f.input :projects %>
+
 
   <h2>Education</h2>
   <div id="educations">
@@ -39,6 +39,13 @@
     </div>
   </div>
 
+<h1>Add Personal info</h1>
+  <div id="personal info">
+    <%= f.simple_fields_for :users do |info| %>
+      <%= render 'user_fields', f: info %>
+    <% end %>
+  
+  </div>
 
 
   <%= f.submit %>
