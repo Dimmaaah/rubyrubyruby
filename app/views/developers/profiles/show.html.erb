@@ -5,7 +5,8 @@
   the information that we display here is the resume, the jobs we applied to. the points the developers earned. a picture
 </p>
 
-<%= cl_image_tag @user.photo, height: 300, width: 400, crop: :fill %>
+<%= cl_image_tag @user.photo, height: 150, width: 150, crop: :fill %>
+
 <h2>add personal info</h2>
 
 <%= simple_form_for @user, url: user_update_developers_profile_path, method: :post do |f| %>
@@ -19,11 +20,12 @@
 
 <% end %>
 
+
 <h2>Resume</h2>
 
 <% if @resume %>
   <%= link_to "Edit", edit_developers_profile_path %>
-  <%= cl_image_tag @resume.photo, height: 300, width: 400, crop: :fill %>
+  <%= cl_image_tag @resume.photo, height: 150, width: 150, crop: :fill %>
   <%= @resume.summary %>
   <%= @resume.linkedin %>
 

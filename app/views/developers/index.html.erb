@@ -1,30 +1,41 @@
-<h1 class="top-developers">Top Developers of the month</h1>
-
-
-
-<div class="wrapper-developers">
-        <ul class="developers-list"><div><% @developers.each do |developer| %>
-          <li class="card">
-            <div class="avatar_developer"><%= link_to developer_path(developer) do %>
-              <%= image_tag "developer.avatar" %></div>
-              <% end %>
-              <div class="card-user"><%= link_to developer_path(developer) do %>
-                <%= "#{developer.first_name} #{developer.last_name}" %>
-                <% end %>
-              </div>
-              <div class="card-category"><%= developer.city %></div>
-              <% end %>
-            </li>
-          </div>
-        </ul>
-        <div class="sideinfo">
-      </div>
-
-
+<h1 class="top-developers">𝕋𝕠𝕡 𝔻𝕖𝕧𝕖𝕝𝕠𝕡𝕖𝕣𝕤 𝕠𝕗 𝕥𝕙𝕖 𝕄𝕠𝕟𝕥𝕙
+</h1>
 
 
 
 <div class="developers-wrapper">
+  <div class="developers-list"><% @developers.each do |developer| %>
+    <div class="developers-card">
+      <%= link_to developer_path(developer) do %>
+      <%= cl_image_tag(developer.resume.photo, class:"developers-avatar") %>
+      <% end %>
+      <div class="developers-name"><%= link_to developer_path(developer) do %>
+        <%= "#{developer.first_name} #{developer.last_name}" %>
+        <% end %>
+      </div>
+      <div class="developers-city"><%= developer.city %></div>
+      <div class="developers-summary"><%= truncate developer.resume.summary, length: 200 %></div>
+      <div class="developers-skill">
+        <% developer.resume.skills.each do |skill| %>
+        <%= skill.name %>
+        <% end %>
+      </div>
+
+    </div>
+    <% end %>
+  </div>
+  <div class="side-bar">
+
+  <div class="sideinfo">
+    <h2>What others say about us</h2>
+  </div>
+  </div>
+
+</div>
+
+
+
+<div class="developers-wrapper-signup">
   <p>Developers are in the highlight to be be approached by the employers</p>
   <p>Do not have a developer profile yet?</p>
 
