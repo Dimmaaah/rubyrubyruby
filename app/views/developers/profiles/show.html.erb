@@ -1,14 +1,25 @@
 <div class="container">
+  <h1>At this page you can find the profile of the developers.</h1>
 
-
-<h1>At this page you can find the profile of the developers.</h1>
-
-<p>
+    <p>
   the information that we display here is the resume, the jobs we applied to. the points the developers earned. a picture
 </p>
-<h1>asdasd</h1>
 
 <%= cl_image_tag @user.photo, height: 150, width: 150, crop: :fill %>
+
+<h2>add personal info</h2>
+
+<%= simple_form_for @user, url: user_update_developers_profile_path, method: :post do |f| %>
+  <%= f.input :job_title %>
+  <%= f.input :street %>
+  <%= f.input :birth_date %>
+  <%= f.input :city %>
+  <%= f.input :photo %>
+  <%= f.input :photo_cache, as: :hidden %>
+  <%= f.button :submit %>
+
+<% end %>
+
 
 <h2>Resume</h2>
 
