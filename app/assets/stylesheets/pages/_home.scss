@@ -1,3 +1,18 @@
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    line-height: 80px;
+    text-shadow: -6px 0 4px #006;
+    color: #B40F00;
+    margin-top: 50px;
+    margin-bottom: 10px;
+}
+h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 40px;
+  margin-top: -10px
+}
 .landing {
   margin-bottom: 0px;
   top: 0;
@@ -5,7 +20,7 @@
   background-color: #2184B2;
 }
 .landing.ruby-background {
-  background: url(https://s3.amazonaws.com/infinum.web.production/repository_items/files/000/000/523/original/infinum_best_ruby_on_rails_refactoring_talks_cr.png?1437459091) no-repeat fixed #0e2439;
+  background:linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(https://s3.amazonaws.com/infinum.web.production/repository_items/files/000/000/523/original/infinum_best_ruby_on_rails_refactoring_talks_cr.png?1437459091) no-repeat fixed #0e2439;
   background-size: cover;
 }
 
@@ -58,9 +73,11 @@ img {
   vertical-align: middle;
   border: 0;
 }
-.container {
-
+#landing2 {
+  background: url(https://unsplash.it/5184/3456?image=723);
+  background-size: cover;
 }
+
 /* Navbar search form */
 .navbar-wagon-search {
   flex: 0 1 300px;
@@ -68,7 +85,21 @@ img {
   justify-content: flex-end;
   padding: 0 10px;
   position: relative;
-  margin-top: -75px;
+  margin-top: 50px;
+  text-align: center;
+  display: inline-block;
+  left: 525px;
+}
+.navbar-wagon-search-2 {
+  flex: 0 1 300px;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0 10px;
+  position: relative;
+  margin-top: -10px;
+  text-align: center;
+  display: inline-block;
+  left: 525px;
 }
 .navbar-wagon-search-btn {
   line-height: 40px;
