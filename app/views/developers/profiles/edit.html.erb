@@ -39,6 +39,13 @@
     </div>
   </div>
 
+<h1>Add Personal info</h1>
+  <div id="personal info">
+    <%= f.simple_fields_for :users do |info| %>
+      <%= render 'user_fields', f: info %>
+    <% end %>
+  
+  </div>
 
 
   <%= f.submit %>

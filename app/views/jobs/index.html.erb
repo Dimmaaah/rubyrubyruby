@@ -1,10 +1,38 @@
 <h1>Apply to these jobs</h1>
+<br>
 
-      <% @jobs.each do |job| %>
-      <h1> <%= link_to "#{job.job_title}", job_path(job) %> </h1>
-        <%= job.location %>
-      <br>
+  <% @jobs.each do |job| %>
+      <div class="onejob">
+
+        <h1> <%= link_to "#{job.job_title}", job_path(job) %> </h1>
+          <%= job.location %>
+          <br>
+
+          <%= job.employer.company_name %>
+        <br>
+      </div>
   <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div id="myCarousel" class="carousel slide" data-ride="carousel">
   <!-- Indicators -->
@@ -46,10 +74,5 @@
 </div>
 </div>
 
-
-<br><br><br><br><br><br>
-<br><br><br><br><br><br>
-<br><br><br><br><br><br>
-</div>
 <br><br><br><br><br><br>
 <br><br><br><br><br><br>

@@ -34,12 +34,17 @@
       <div class="dropdown">
         <%= image_tag "http://placehold.it/30x30", class: "avatar dropdown-toggle", id: "navbar-wagon-menu", "data-toggle" => "dropdown" %>
         <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
+
+
+          <!-- So this code won't show the homepage in the dropdown menu if you're at the homepage
+           params [controller] part gives you the controller and params action give you the method that deals witht the specific page.  -->
+          <% unless params["controller"] == "pages" && params["action"] == "home" %>
           <li>
             <%= link_to root_path  do %>
             <i class="fa fa-home"></i>  <%= t ".profile", default: "Home" %>
             <% end %>
           </li>
-
+            <% end %>
           <li>
             <%= link_to developers_profile_path do %>
             <i class="fa fa-user"></i> <%= t ".profile", default: "Profile" %>

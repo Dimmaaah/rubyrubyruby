@@ -165,6 +165,8 @@ $cards-speed: 50s;
    overflow: hidden;
    background: #fff;
    padding: $card-padding;
+   border-radius: 8px;
+   background-color: #126DB3;
 
    & > a {
      color: inherit !important;
@@ -233,4 +235,3 @@ $i: $cards-quantity;
 
  $i: $i - 1;
 }
-
