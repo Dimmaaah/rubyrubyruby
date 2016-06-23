@@ -5,7 +5,7 @@
   background-color: #2184B2;
 }
 .landing.ruby-background {
-  background:linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(https://s3.amazonaws.com/infinum.web.production/repository_items/files/000/000/523/original/infinum_best_ruby_on_rails_refactoring_talks_cr.png?1437459091) no-repeat fixed #0e2439;
+  background: image-url('banner-home.jpg') no-repeat #0e2439;
   background-size: cover;
 }
 
@@ -18,14 +18,14 @@
   background: none;
 }
 .landing .with-search-form {
-  padding-top: 6em;
-  padding-top: 11vh;
-  padding-bottom: 8em;
   box-sizing: border-box;
   width: 100%;
   height: calc(100vh - 150px);
   min-height: 690px;
   position: relative;
+      display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .landing .hero-unit {
   background: none;
@@ -59,48 +59,59 @@ img {
   border: 0;
 }
 
+.header-title {
+  color: white;
+}
+
+.header-subtitle {
+  color: rgba(255,255,255, 0.6);
+}
+
+.button-yellow {
+      padding: 11px 18px;
+    border: none;
+    border-radius: 3px;
+    background-color: #f5d064;
+}
 /* Navbar search form */
-.navbar-wagon-search {
-  flex: 0 1 300px;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 10px;
-  position: relative;
-  margin-top: 50px;
-  text-align: center;
-  display: inline-block;
-  left: 525px;
-}
-.navbar-wagon-search-2 {
-  flex: 0 1 300px;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0 10px;
-  position: relative;
-  margin-top: -10px;
-  text-align: center;
-  display: inline-block;
-  left: 525px;
-}
-.navbar-wagon-search-btn {
-  line-height: 40px;
-  color: #E6E6E6;
-  border: none;
-  background: transparent;
-  position: absolute;
-  right: 14px;
-  top: -2px;
-  z-index: 1;
-}
+// .navbar-wagon-search {
+//   flex: 0 1 300px;
+//   display: flex;
+//   justify-content: flex-end;
+//   position: relative;
+//   margin-top: 50px;
+//   text-align: center;
+//   display: inline-block;
+//   left: 525px;
+// }
+// .navbar-wagon-search-2 {
+//   flex: 0 1 300px;
+//   display: flex;
+//   justify-content: flex-end;
+//   padding: 0 10px;
+//   position: relative;
+//   margin-top: -10px;
+//   text-align: center;
+//   display: inline-block;
+//   left: 525px;
+// }
+// .navbar-wagon-search-btn {
+//   line-height: 40px;
+//   color: #E6E6E6;
+//   border: none;
+//   background: transparent;
+//   position: absolute;
+//   right: 14px;
+//   top: -2px;
+//   z-index: 1;
+// }
 .navbar-wagon-search-input {
-  flex: 0 1 300px;
   transition: all 0.15s ease;
-  line-height: 40px;
   font-weight: lighter;
   color: #666666;
   border: 1px solid #E6E6E6;
-  border-radius: 5px;
-  padding: 0 10px;
+  border-radius: 3px;
+  padding: 22px 15px;
   font-size: 14px;
   outline: none;
 }
