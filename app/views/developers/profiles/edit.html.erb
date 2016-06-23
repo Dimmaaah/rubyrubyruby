@@ -1,5 +1,5 @@
 <h1>Edition of your resume</h1>
-<%= cl_image_tag @resume.photo, height: 300, width: 400, crop: :fill %>
+<%= cl_image_tag @resume.photo, height: 150, width: 150, crop: :fill %>
 
 <%= simple_form_for @resume, url: developers_profile_path, method: :patch do |f|  %>
   <%= f.input :summary %>

@@ -1,36 +1,41 @@
-<h1 class="top-developers">Top Developers of the month</h1>
-
-
-
-<div class="wrapper-developers">
-        <ul class="developers-list"><div><% @developers.each do |developer| %>
-          <li class="card">
-            <div class="avatar_developer"><%= link_to developer_path(developer) do %>
-              <%= image_tag "developer.avatar" %></div>
-              <% end %>
-              <div class="card-user"><%= link_to developer_path(developer) do %>
-                <%= "#{developer.first_name} #{developer.last_name}" %>
-                <% end %>
-              </div>
-              <div class="card-category"><%= developer.city %></div>
-              <% end %>
-            </li>
-          </div>
-        </ul>
-        <div class="sideinfo">
-
-          <h2>adasmdasd</h2>
-          <div class="flow-group skill_trust-wrapper" data-role="trust-wrapper"><div class="flow-title">Trustpilot</div><div class="flow-item_wrapper for-trustpilot"><div class="flow-item"><div class="flow-item_inner"><div class="trustpilot for-skill" data-view="trustpilot#trustpilot" style="opacity: 1;"><div class="trustpilot-inner"><div class="trustpilot-rate_text"><span data-role="rate_text">Excellent</span></div><a class="trustpilot-stars" href="https://www.trustpilot.com/review/toptal.com" rel="nofollow" target="_blank"><div class="trustpilot-star"></div><div class="trustpilot-star"></div><div class="trustpilot-star"></div><div class="trustpilot-star"></div><div class="trustpilot-star"></div></a><div class="trustpilot-reviews">See <a href="https://www.trustpilot.com/review/toptal.com" target="_blank" rel="noopener noreferrer">Toptal reviews</a> here</div><span class="trustpilot-logo"><img src="//assets.toptal.io/assets/front/static/public/blocks/trustpilot/trustpilot_468986.png" alt="Trustpilot 468986"></span></div></div></div></div></div><div class="flow-title">Toptal on TV</div><div class="flow-item_wrapper for-tv" id="ab-skill_page-on_tv_wrapper"><div class="flow-item"><div class="flow-item_inner for-cnbc" data-view="video_embed#popup"><div class="skill_trust-logo"><img class="skill_trust-logo_image" src="//assets.toptal.io/assets/front/static/public/blocks/toptal_in_press/cnbc_0218c1.png" alt="Cnbc 0218c1"></div><div class="skill_trust-text">"Toptal is killing it, it kind of owns this market."</div><a class="skill_trust-play_link is-standalone" data-role="show_link" href="#"></a><div class="skill_trust-cover is-cnbc" data-role="show_link"><a class="skill_trust-play_link is-embedded" href="#"></a></div><a class="skill_trust-name" href="https://www.youtube.com/watch?v=zhdHXKBfXSQ" target="_blank" rel="noopener noreferrer">Andrew Ross Sorkin Reviews Toptal</a><div class="popup_template" data-html="&quot;\u003cdiv class=\&quot;video_popup\&quot;\u003e\u003cdiv class=\&quot;video_popup-overlay\&quot;\u003e\u003cdiv class=\&quot;video_popup-wrapper\&quot;\u003e\u003cdiv class=\&quot;video_popup-player\&quot;\u003e\u003ciframe allowfullscreen=\&quot;\&quot; frameborder=\&quot;0\&quot; height=\&quot;100%\&quot; mozallowfullscreen=\&quot;\&quot; src=\&quot;//player.vimeo.com/video/130765227?byline=0\u0026amp;amp;portrait=0\u0026amp;amp;color=ffffff\u0026amp;amp;autoplay=1\&quot; webkitallowfullscreen=\&quot;\&quot; width=\&quot;100%\&quot;\u003e\u003c/iframe\u003e\u003c/div\u003e\u003cdiv class=\&quot;video_popup-footer\&quot;\u003e\u003cdiv class=\&quot;video_popup-logo\&quot;\u003e\u003cimg src=\&quot;//assets.toptal.io/assets/front/static/public/blocks/toptal_in_press/cnbc_0218c1.png\&quot; alt=\&quot;Cnbc 0218c1\&quot; /\u003e\u003c/div\u003e\u003cdiv class=\&quot;video_popup-description\&quot;\u003e\u003cdiv class=\&quot;video_popup-description_title\&quot;\u003eTaso Du Val on CNBC\u0026#39;s Squawk Box\u003c/div\u003e\u003cdiv class=\&quot;video_popup-description_text\&quot;\u003eTaso Du Val, Toptal\u0026#39;s co-founder \u0026amp; CEO, reviews how Toptal connects businesses to great software developers with CNBC hosts Andrew Ross and Becky Quick.\u003c/div\u003e\u003cdiv class=\&quot;video_popup-description_date\&quot;\u003eInterview on CNBC, May 8th, 2015\u003c/div\u003e\u003c/div\u003e\u003c/div\u003e\u003ca class=\&quot;video_popup-close_link\&quot; data-role=\&quot;hide_link\&quot; href=\&quot;#\&quot;\u003e\u0026times;\u003c/a\u003e\u003c/div\u003e\u003c/div\u003e\u003c/div\u003e&quot;" data-role="popup_template"></div><div class="skill_trust-item_player" data-id="130765227" data-type="vimeo" data-view="video_embed#embed_link"><img class="skill_trust-item_player_cover" src="//assets.toptal.io/assets/front/static/public/blocks/toptal_in_press/video_previews/cnbc_02e66b.jpg" alt="Cnbc 02e66b"></div></div><div class="flow-item_inner for-fox" data-view="video_embed#popup"><div class="skill_trust-logo"><img class="skill_trust-logo_image" src="//assets.toptal.io/assets/front/static/public/blocks/toptal_in_press/fox_8d4591.png" alt="Fox 8d4591"></div><div class="skill_trust-text">"Tech companies simply cannot find the quality employees they want to hire. The solution: Toptal."</div><a class="skill_trust-play_link is-standalone" data-role="show_link" href="#"></a><div class="skill_trust-cover is-fox" data-role="show_link"><a class="skill_trust-play_link is-embedded" href="#"></a></div><a class="skill_trust-name" href="https://www.youtube.com/watch?v=Im4Eib_KEP8" target="_blank" rel="noopener noreferrer">Liz Claman´s Review of Toptal</a><div class="popup_template" data-html="&quot;\u003cdiv class=\&quot;video_popup\&quot;\u003e\u003cdiv class=\&quot;video_popup-overlay\&quot;\u003e\u003cdiv class=\&quot;video_popup-wrapper\&quot;\u003e\u003cdiv class=\&quot;video_popup-player\&quot;\u003e\u003ciframe allowfullscreen=\&quot;\&quot; frameborder=\&quot;0\&quot; height=\&quot;100%\&quot; mozallowfullscreen=\&quot;\&quot; src=\&quot;//player.vimeo.com/video/130772638?byline=0\u0026amp;amp;portrait=0\u0026amp;amp;color=ffffff\u0026amp;amp;autoplay=1\&quot; webkitallowfullscreen=\&quot;\&quot; width=\&quot;100%\&quot;\u003e\u003c/iframe\u003e\u003c/div\u003e\u003cdiv class=\&quot;video_popup-footer\&quot;\u003e\u003cdiv class=\&quot;video_popup-logo\&quot;\u003e\u003cimg src=\&quot;//assets.toptal.io/assets/front/static/public/blocks/toptal_in_press/fox_8d4591.png\&quot; alt=\&quot;Fox 8d4591\&quot; /\u003e\u003c/div\u003e\u003cdiv class=\&quot;video_popup-description\&quot;\u003e\u003cdiv class=\&quot;video_popup-description_title\&quot;\u003eTaso Du Val on Fox’s Countdown to the Closing Bell\u003c/div\u003e\u003cdiv class=\&quot;video_popup-description_text\&quot;\u003eTaso Du Val, Toptal\u0026#39;s co-founder \u0026amp; CEO, discusses how Toptal works with Liz Claman of Fox Business, including details of the screening process the company uses to test and identify the top developers from around the world.\u003c/div\u003e\u003cdiv class=\&quot;video_popup-description_date\&quot;\u003eInterview on Fox Business, June 5th, 2015\u003c/div\u003e\u003c/div\u003e\u003c/div\u003e\u003ca class=\&quot;video_popup-close_link\&quot; data-role=\&quot;hide_link\&quot; href=\&quot;#\&quot;\u003e\u0026times;\u003c/a\u003e\u003c/div\u003e\u003c/div\u003e\u003c/div\u003e&quot;" data-role="popup_template"></div><div class="skill_trust-item_player" data-id="130772638" data-type="vimeo" data-view="video_embed#embed_link"><img class="skill_trust-item_player_cover" src="//assets.toptal.io/assets/front/static/public/blocks/toptal_in_press/video_previews/fox_7ef901.jpg" alt="Fox 7ef901"></div></div></div></div><div class="flow-title">Toptal in the press</div><div class="flow-item_wrapper for-press"><div class="flow-item"><div class="flow-item_inner for-entrepreneur"><div class="skill_trust-logo"><img class="skill_trust-logo_image" src="//assets.toptal.io/assets/front/static/public/blocks/toptal_in_press/entrepreneur_6bf098.png" alt="Entrepreneur 6bf098"></div><div class="skill_trust-text">"Passing Toptal's screening process gives you unparalleled access to meaningful projects with great clients."</div><div class="skill_trust-name">Anna Johansson</div></div><div class="flow-item_inner for-inc"><div class="skill_trust-logo"><img class="skill_trust-logo_image" src="//assets.toptal.io/assets/front/static/public/blocks/toptal_in_press/inc_d80c30.png" alt="Inc d80c30"></div><div class="skill_trust-text">"Toptal's approach makes it a definite outlier compared to conventional platforms."</div><div class="skill_trust-name">Drew Hendricks</div></div></div></div></div>
-
-
-        </div>
-      </div>
-
-
+<h1 class="top-developers">𝕋𝕠𝕡 𝔻𝕖𝕧𝕖𝕝𝕠𝕡𝕖𝕣𝕤 𝕠𝕗 𝕥𝕙𝕖 𝕄𝕠𝕟𝕥𝕙
+</h1>
 
 
 
 <div class="developers-wrapper">
+  <div class="developers-list"><% @developers.each do |developer| %>
+    <div class="developers-card">
+      <%= link_to developer_path(developer) do %>
+      <%= cl_image_tag(developer.resume.photo, class:"developers-avatar") %>
+      <% end %>
+      <div class="developers-name"><%= link_to developer_path(developer) do %>
+        <%= "#{developer.first_name} #{developer.last_name}" %>
+        <% end %>
+      </div>
+      <div class="developers-city"><%= developer.city %></div>
+      <div class="developers-summary"><%= truncate developer.resume.summary, length: 200 %></div>
+      <div class="developers-skill">
+        <% developer.resume.skills.each do |skill| %>
+        <%= skill.name %>
+        <% end %>
+      </div>
+
+    </div>
+    <% end %>
+  </div>
+  <div class="side-bar">
+
+  <div class="sideinfo">
+    <h2>What others say about us</h2>
+  </div>
+  </div>
+
+</div>
+
+
+
+<div class="developers-wrapper-signup">
   <p>Developers are in the highlight to be be approached by the employers</p>
   <p>Do not have a developer profile yet?</p>
 
