@@ -5,7 +5,7 @@
   background-color: #2184B2;
 }
 .landing.ruby-background {
-  background: image-url('banner-home.jpg') no-repeat #0e2439;
+  background: image-url('banner-home.jpg') no-repeat;
   background-size: cover;
 }
 
@@ -61,6 +61,7 @@ img {
 
 .header-title {
   color: white;
+  margin-top: 0;
 }
 
 .header-subtitle {
