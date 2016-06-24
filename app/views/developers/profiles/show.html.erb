@@ -1,80 +1,16 @@
-<div class="container">
-  <h1>At this page you can find the profile of the developers.</h1>
+<div class="developer-profile">
+  <% if @resume %>
+    <%= cl_image_tag(@user.resume.photo, height: 150, width: 150, crop: :fill, class:"profile-avatar") %>
+  <% else %>
+    <%= image_tag "logo.png" %>
+  <% end %>
 
-    <p>
-  the information that we display here is the resume, the jobs we applied to. the points the developers earned. a picture
-</p>
-
-<%= cl_image_tag @user.photo, height: 150, width: 150, crop: :fill %>
-
-<h2>add personal info</h2>
-
-<%= simple_form_for @user, url: user_update_developers_profile_path, method: :post do |f| %>
-  <%= f.input :job_title %>
-  <%= f.input :street %>
-  <%= f.input :birth_date %>
-  <%= f.input :city %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
-  <%= f.button :submit %>
-
-<% end %>
-
-
-<h2>Resume</h2>
+  <%= render 'developers/personal_info', developer: @user %>
+  <%= link_to 'Edit profile', edit_developers_profile_path, class: "btn btn-primary" %>
+</div>
 
 <% if @resume %>
-  <%= link_to "Edit", edit_developers_profile_path %>
-  <%= cl_image_tag @resume.photo, height: 150, width: 150, crop: :fill %>
-  <%= @resume.summary %>
-  <%= @resume.linkedin %>
-
-  <h3>Skills</h3>
-  <ul>
-    <% @resume.skills.each do |skill| %>
-      <li><%= skill.name %></li>
-    <% end %>
-  </ul>
-
-  <h3>Education</h3>
-  <% @resume.educations.each do |education| %>
-    <div>
-      <%= education.name %>
-      <%= education.school %>
-      <%= education.start_date %>
-      <%= education.end_date %>
-    </div>
-  <% end %>
-
-  <h3>Projects</h3>
-  <% @resume.projects.each do |project| %>
-    <div>
-      <%= project.name %>
-      <%= project.description %>
-    </div>
-  <% end %>
-
-  <h3>work_experiences</h3>
-  <% @resume.work_experiences.each do |work_experience| %>
-    <div>
-      <%= work_experience.start_date %>
-      <%= work_experience.end_date %>
-      <%= work_experience.company_name %>
-      <%= work_experience.job_title %>
-      <%= work_experience.description %>
-
-    </div>
-  <% end %>
-
-
+  <%= render 'developers/resume', developer: @user %>
 <% else %>
   <%= link_to "Add your resume", edit_developers_profile_path %>
 <% end %>
-
-
-
-
-
-</div>
-<br><br><br><br><br><br><br><br><br><br><br><br>
-<!-- Cloudinary::Uploader.upload("SinglePageSample.pdf", :public_id => "single_page_pdf") -->
