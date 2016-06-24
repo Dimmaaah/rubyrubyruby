@@ -6,8 +6,9 @@
   <% end %>
 
   <%= render 'developers/personal_info', developer: @user %>
-  <%= link_to 'Edit profile', edit_developers_profile_path, class: "btn btn-primary" %>
+  <%= link_to 'Edit profile', edit_developers_profile_path, class: "edit-profile-btn" %>
 </div>
+
 
 <% if @resume %>
   <%= render 'developers/resume', developer: @user %>

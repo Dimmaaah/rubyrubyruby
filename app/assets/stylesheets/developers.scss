@@ -2,6 +2,59 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //
+
+.resume-partial-title {
+  color: #AFB2B5;
+}
+
+.edit-profile-btn {
+  display: inline-block;
+  background-color: #D23333;
+  margin-bottom: 10px;
+  color: white;
+  border: 1px solid #999999;
+  padding: 10px 15px;
+  border-radius: 50px;
+  font-weight: lighter;
+  height:45px;
+  margin-left:auto;
+}
+
+.profile-name {
+  margin: 6px 0px;
+}
+
+.date {
+  font-size:15px;
+}
+
+.skill {
+  display: inline-block;
+  background-color: #AF1C2C;
+  color: white;
+  padding: 3px 3px;
+  border-radius: 3px;
+  font-weight: lighter;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .developers-wrapper {
   width:100%;
   display:flex;

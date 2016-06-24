@@ -1,40 +1,38 @@
 <div class="developer-work">
-  <h3>Skills</h3>
-  <ul>
+  <h3 class="resume-partial-title">Summary</h3>
+ <%= developer.resume.summary %>
+ <hr>
+  <h3 class="resume-partial-title">Skills</h3>
     <% developer.resume.skills.each do |skill| %>
-      <li><%= skill.name %></li>
+      <span class="skill"><%= skill.name %></span>
     <% end %>
-  </ul>
+    <hr>
+  <div class="work-experience">
+    <h3 class="resume-partial-title">Work Experience</h3>
+    <% developer.resume.work_experiences.each do |experience| %>
+    <strong><%= experience.job_title %></strong>  <br>
+    <%= experience.company_name %> <br>
+    <p class="date"><%= experience.start_date %> - <%= experience.end_date%></p>
+   <p class="date"><%= experience.description %></p>
+    <% end %>
+  </div>
 
-  <h3><i class="fa fa-briefcase" aria-hidden="true"></i>Work Experience</h3>
-  <p class="profile-work-experience">
-  <% developer.resume.work_experiences.each do |experience| %>
-    <div class="job_title"><%= experience.job_title %><br>
-    <%= experience.company_name %>
-    </div><br>
-    <%= experience.start_date %> <br>
-    <%= experience.end_date %> <br>
-    <%= experience.description %>
-    <% end %>
-  </p>
   <hr>
-  <h3><i class="fa fa-graduation-cap" aria-hidden="true"></i>Education</h3>
+ <div class="education"><h3 class="resume-partial-title">Education</h3>
   <% developer.resume.educations.each do |education| %>
-    <div>
-      <%= education.name %>
+     <strong><%= education.name %></strong> <br>
       <%= education.school %>
-      <%= education.start_date %>
-      <%= education.end_date %>
-    </div>
+     <p class="date"><%= education.start_date %> - <%= education.end_date %>
+    </p>
+
   <% end %>
+</div>
 
   <hr>
-  <h3><i class="fa fa-line-chart" aria-hidden="true"></i>Projects</h3>
-  <% developer.resume.projects.each do |project| %>
-    <div>
-      <%= project.name %>
-      <%= project.description %>
-    </div>
+  <h3 class="resume-partial-title">Projects</h3>
+    <% developer.resume.projects.each do |project| %>
+      <strong><%= project.name %></strong> <br>
+      <%= project.description %> <br> <br>
   <% end %>
 </div>
 
