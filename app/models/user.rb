@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
 
+  accepts_nested_attributes_for :resume, reject_if: :all_blank, allow_destroy: true
+
   mount_uploader :photo, PhotoUploader
 
   TEMP_EMAIL_PREFIX = 'change@me'

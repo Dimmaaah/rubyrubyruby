@@ -123,7 +123,7 @@ titles = ["dev", "consultant", "hacker", "unicorn", "ninja"]
 # Umer
 
 umer = User.create!(
-  email: Faker::Internet.email,
+  email: "umersaqib160@hotmail.com",
   job_title: "#{Faker::Company.profession} #{titles.sample}",
   first_name: "Umer",
   last_name: "Saqib",

@@ -17,11 +17,7 @@ Rails.application.routes.draw do
 
   # ============== developer interface ====================
   namespace :developers do
-    resource :profile, only: [:show, :edit, :update] do
-      member do
-        post :user_update 
-      end
-    end
+    resource :profile, only: [:show, :edit, :update]
     resources :applications, only: [:index, :show]
   end
 

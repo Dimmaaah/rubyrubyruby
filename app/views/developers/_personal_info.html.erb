@@ -1,0 +1,11 @@
+<div class="basic-info">
+  <h3><%= "#{developer.first_name} #{developer.last_name}" %></h3>
+  <p class = "profile-city"><%= developer.city %></p>
+  <p class = "profile-email"><%= developer.email %></p>
+  <p class= profile-phone><%= developer.resume.phone %></p>
+
+  <% if developer.resume %>
+    <%= developer.resume.summary %>
+    <%= developer.resume.linkedin %>
+  <% end %>
+</div>

@@ -1,24 +1,8 @@
-
 <div class="developer-profile">
-
-
-  <%= cl_image_tag(@developer.resume.photo, class:"profile-avatar") %>
-
-   <div class="basic-info">
-     <h3><%= "#{@developer.first_name} #{@developer.last_name}" %></h3>
-        <p class = "profile-city"><%= @developer.city %></p>
-        <p class = "profile-email"><%= @developer.email %></p>
-        <p class= profile-phone><%= @developer.resume.phone %></p>
-
-   </div>
-  </div>
-
-
-<div class="developer-work">
-  <h1><i class="fa fa-briefcase" aria-hidden="true"></i>Work Experience</h1>
-  <hr>
-  <h1><i class="fa fa-graduation-cap" aria-hidden="true"></i>Education</h1>
-  <hr>
-  <h1><i class="fa fa-line-chart" aria-hidden="true"></i>Projects</h1>
+  <%= cl_image_tag(@developer.resume.photo, height: 150, width: 150, crop: :fill, class:"profile-avatar") %>
+  <%= render 'personal_info', developer: @developer %>
 </div>
 
+<% if @developer.resume %>
+  <%= render 'resume', developer: @developer %>
+<% end %>
