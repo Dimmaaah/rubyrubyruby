@@ -1,18 +1,20 @@
+
 <div class="container">
-<h1>Here Employers will fill in their info.</h1>
+  <div class="form">
+    <h2 class="main-text">Employer Information</h2>
 
-<%= simple_form_for @employer, url: employers_profile_path, method: :patch, class: "form-horizontal" do |f|  %>
-  <%= f.input :company_name %>
-  <%= f.input :first_name %>
-  <%= f.input :last_name %>
-  <%= f.input :email %>
-  <%= f.input :street %>
-  <%= f.input :postcode %>
-  <%= f.input :city %>
-  <%= f.input :country %>
-  <%= f.input :phone %>
+    <%= simple_form_for @employer, url: employers_profile_path, method: :patch, class: "form-horizontal" do |f|  %>
+    <%= f.input :company_name %>
+    <%= f.input :email %>
+    <%= f.input :phone %>
+    <%= f.input :country %>
+    <%= f.input :city %>
+    <%= f.input :street %>
+    <%= f.input :postcode %>
 
-  <%= f.submit %>
-<% end %>
-
-</div>
+    <div class="button">
+      <%= f.submit %>
+      <% end %>
+      </div
+    </div>
+  </div>
