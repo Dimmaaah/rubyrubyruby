@@ -1,40 +1,37 @@
-
 <div class="container">
-  <div class="info_employer">
-<%= @employer.company_name %>
-<br>
-</div>
-  <div class="info_employer">
-<%= @employer.first_name %>
-</div>
-<br>
-  <div class="info_employer">
-<%= @employer.last_name %>
-</div>
-<br>
-  <div class="info_employer">
-<%= @employer.email %>
-</div>
-<br>
-  <div class="info_employer">
-<%= @employer.street %>
-</div>
-<br>
-  <div class="info_employer">
-<%= @employer.postcode %>
-</div>
-<br>
-  <div class="info_employer">
-<%= @employer.city %>
-</div>
-<br>
-  <div class="info_employer">
-<%= @employer.country %>
-</div>
-<br>
-  <div class="info_employer">
-<%= @employer.phone %>
-</div>
-
-<%= link_to "edit", edit_employers_profile_path%>
+  <div class="form">
+    <h2 class="main-text">Employer Information</h2>
+    <div class="info_employer">
+      <%= @employer.company_name %>
+      </div>
+      <br>
+      <div class="info_employer">
+        <%= @employer.email %>
+      </div>
+      <br>
+      <div class="info_employer">
+        <%= @employer.phone %>
+      </div>
+      <br>
+      <div class="info_employer">
+        <%= @employer.street %>
+      </div>
+      <br>
+      <div class="info_employer">
+        <%= @employer.postcode %>
+      </div>
+      <br>
+      <div class="info_employer">
+        <%= @employer.city %>
+      </div>
+      <br>
+      <div class="info_employer">
+        <%= @employer.country %>
+      </div>
+      <br>
+      <button class="btn">
+        <%= link_to "edit", edit_employers_profile_path%>
+      </button>
+    </div>
+  </div>
 </div>

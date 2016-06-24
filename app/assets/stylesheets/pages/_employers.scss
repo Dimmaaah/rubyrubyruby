@@ -1,5 +1,51 @@
-.info_employer {
-  background-color: white;
-  padding: 30px;
-  border-radius: 8px;
+.container {
+  width: 600px;
+  padding: 5% 0 0;
+  margin: auto;
+}
+.main-text {
+  font-weight: 100px;
+  color: #333;
+  padding-bottom: 25px;
+}
+.form {
+  position: relative;
+  background-color: #fff;
+  width: 600px;
+  margin: 0 auto 400px;
+  padding: 45px;
+  text-align: left;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+  width: 100%;
+  height: auto;
+  margin: 0 0 15px;
+  padding: 15px;
+  outline: 0;
+  border: none;
+  background: #f2f2f2;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+.button {
+  outline: 0;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.btn {
+  outline: 0;
+  width: 25%;
+  border: 0;
+  padding: 10px;
+  text-transform: uppercase;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
 }
