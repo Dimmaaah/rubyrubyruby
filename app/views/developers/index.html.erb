@@ -20,16 +20,12 @@
             <div class="developers-summary"><%= truncate developer.resume.summary, length: 200 %></div>
             <div class="developers-skill">
               <% developer.resume.skills.each do |skill| %>
-              <%= skill.name %>
+              <span class="skill"><%= skill.name %></span>
               <% end %>
             </div>
 
           </div>
           <% end %>
-        </div>
-        <div class="side-bar">
-
-
         </div>
       </div>
     </div>
