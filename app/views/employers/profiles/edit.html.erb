@@ -1,6 +1,6 @@
 
-<div class="container">
-  <div class="form">
+<div id="employer_container" class="container">
+  <div id="employer_form" class="form">
     <h2 class="main-text">Employer Information</h2>
 
     <%= simple_form_for @employer, url: employers_profile_path, method: :patch, class: "form-horizontal" do |f|  %>
@@ -12,9 +12,10 @@
     <%= f.input :street %>
     <%= f.input :postcode %>
 
-    <div class="button">
+    <div id="employer_button" class="button">
       <%= f.submit %>
       <% end %>
       </div
     </div>
   </div>
+</div>

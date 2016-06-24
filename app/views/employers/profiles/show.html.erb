@@ -1,5 +1,5 @@
-<div class="container">
-  <div class="form">
+<div id="employer_container" class="container">
+  <div id="employer_form" class="form">
     <h2 class="main-text">Employer Information</h2>
     <div class="info_employer">
       <%= @employer.company_name %>
@@ -29,7 +29,7 @@
         <%= @employer.country %>
       </div>
       <br>
-      <button class="btn">
+      <button id="employer_btn" class="btn">
         <%= link_to "edit", edit_employers_profile_path%>
       </button>
     </div>
