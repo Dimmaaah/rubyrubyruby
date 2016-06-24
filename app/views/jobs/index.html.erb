@@ -3,20 +3,22 @@
 
   <% @jobs.each do |job| %>
       <div class="onejob">
-
         <h1> <%= link_to "#{job.job_title}", job_path(job) %> </h1>
           <%= job.location %>
           <br>
-
           <%= job.employer.company_name %>
         <br>
       </div>
   <% end %>
 
+    <div class="side-bar">
 
+    <div class="sideinfo">
+      <h2>What others say about us</h2>
+    </div>
+    </div>
 
-
-
+  </div>
 
 
 

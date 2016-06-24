@@ -5,7 +5,7 @@
   <h1 class="h1-test">here you'll find the jobs that are created by an employer</h1>
   <div class="vacancy">
     <% @job.skills.each do |skill| %>
-      <%= skill.name %>
+    <span id="skilltags"><%= skill.name %></span>
     <% end %>
   </div>
 
@@ -35,7 +35,7 @@ received applications:
   </div>
   <div class="vacancy">
     <% @job.skills.each do |skill| %>
-      <%= skill.name %>
+    <span><%= skill.name %></span>
     <% end %>
 
     <br>

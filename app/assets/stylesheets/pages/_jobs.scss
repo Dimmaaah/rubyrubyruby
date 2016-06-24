@@ -1,9 +1,8 @@
 .vacancy{
   color: black;
   margin: 40px;
-  font-size: 20px;
-  margin: 40px;
-  font-family: ARIAL;
+  font-size: 30px;
+  font-family: cursive;
   padding: 20px;
 }
 
@@ -26,4 +25,26 @@
   font-family: monospace;
   padding: 45px;
   padding-color: blue;
+}
+
+
+.jjob {
+  margin-bottom: 20px;
+  padding: 30px;
+  font-size: 26px;
+}
+
+.btn_new_job {
+  padding: 20px;
+  background: blue;
+  border-radius: 10px;
+  border: solid-black;
+  color: white;
+  margin-left: 60 px;
+}
+
+#skilltags {
+  padding: 15px;
+  background-color: grey;
+  border-radius: 6px;
 }
