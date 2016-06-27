@@ -25,13 +25,13 @@ received applications:
   <h2> <%= @job.job_title %></h2>
   </div>
   <div class="vacancy">
+    <%= @job.location.capitalize %>
+  </div>
+  <div class="vacancy">
     <%= @job.salary %>
   </div>
   <div class="vacancy">
     <%= @job.description %>
-  </div>
-  <div class="vacancy">
-    <%= @job.location %>
   </div>
   <div class="vacancy">
 
