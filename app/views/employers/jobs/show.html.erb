@@ -5,7 +5,7 @@
   <h1 class="h1-test">here you'll find the jobs that are created by an employer</h1>
   <div class="vacancy">
     <% @job.skills.each do |skill| %>
-    <span id="skilltags"><%= skill.name %></span>
+    <span class="skill"><%= skill.name %></span>
     <% end %>
   </div>
 
@@ -25,22 +25,19 @@ received applications:
   <h2> <%= @job.job_title %></h2>
   </div>
   <div class="vacancy">
+    <%= @job.location.capitalize %>
+  </div>
+  <div class="vacancy">
     <%= @job.salary %>
   </div>
   <div class="vacancy">
     <%= @job.description %>
   </div>
   <div class="vacancy">
-    <%= @job.location %>
-  </div>
-  <div class="vacancy">
-    <% @job.skills.each do |skill| %>
-    <span><%= skill.name %></span>
-    <% end %>
 
     <br>
 
-
+  <%= link_to 'Edit Job', edit_employers_job_path, class: "edit-profile-btn" %>
 
   </div>
 </div>

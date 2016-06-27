@@ -1,6 +1,8 @@
+<div class="container">
+<br><br>
 <div class="developer-profile">
   <% if @resume %>
-    <%= cl_image_tag(@user.resume.photo, height: 150, width: 150, crop: :fill, class:"profile-avatar") %>
+    <%= cl_image_tag(@user.resume.photo, class: "photo", height: 150, width: 150, crop: :fill, class:"profile-avatar") %>
   <% else %>
     <%= image_tag "logo.png" %>
   <% end %>
@@ -15,3 +17,4 @@
 <% else %>
   <%= link_to "Add your resume", edit_developers_profile_path %>
 <% end %>
+</div>
