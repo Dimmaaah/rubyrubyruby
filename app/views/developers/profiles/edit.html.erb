@@ -1,4 +1,6 @@
-<h1>Edition of your resume</h1>
+
+<div class="wrapper-resume-edit">
+<h1>Edit your resume</h1>
 <%= cl_image_tag @resume.photo, height: 150, width: 150, crop: :fill %>
 
 <%= simple_form_for @user, url: developers_profile_path, method: :patch do |f|  %>
@@ -53,4 +55,5 @@
 
   <%= f.submit %>
 <% end %>
+</div>
 <br><br><br><br><br><br><br><br><br><br><br><br>
