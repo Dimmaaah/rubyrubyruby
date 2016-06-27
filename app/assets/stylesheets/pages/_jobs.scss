@@ -7,15 +7,6 @@
 }
 
 
-.onejob{
-  margin: 20px;
-  padding: 40px;
-  color: white;
-  background-color: rgb(33, 132, 178);
-  border-radius: 8px;
-
-}
-
 .h1 {
   font-size: 80px;
   font-family: monospace;
@@ -45,4 +36,27 @@
   border-radius: 6px;
   margin: 5px;
   display: inline-block;
+}
+
+.avatar-bordered {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  border: white 1px solid;
+}
+
+.white-container{
+background-color: white;
+border-top: 1px solid #efefef;
+padding-top: 30px;
+padding-bottom: 30px;
+}
+
+.jobs-card{
+    min-height: 170px;
+}
+
+.testimonial-name{
+  padding-top: 10px;
 }
