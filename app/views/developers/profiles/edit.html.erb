@@ -1,5 +1,6 @@
+<div class="container">
 <h1>Edition of your resume</h1>
-<%= cl_image_tag @resume.photo, height: 150, width: 150, crop: :fill %>
+<%= cl_image_tag @resume.photo, class: "photo", height: 150, width: 150, crop: :fill %>
 
 <%= simple_form_for @user, url: developers_profile_path, method: :patch do |f|  %>
 
@@ -54,3 +55,4 @@
   <%= f.submit %>
 <% end %>
 <br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
