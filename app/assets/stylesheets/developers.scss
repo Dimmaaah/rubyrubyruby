@@ -28,79 +28,63 @@
   font-size:15px;
 }
 
-.skill {
-  display: inline-block;
-  background-color: #AF1C2C;
-  color: white;
-  padding: 3px 3px;
-  border-radius: 3px;
-  font-weight: lighter;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.developers-wrapper {
-  width:100%;
-  display:flex;
-}
+// .skill {
+//   display: inline-block;
+//   background-color: #AF1C2C;
+//   color: white;
+//   padding: 3px 3px;
+//   border-radius: 3px;
+//   font-weight: lighter;
+// }
 
 .developers-avatar {
-  position: absolute;
+  // position: absolute;
   border-radius:50%;
-  width: 150px;
+  min-width: 150px;
   height: 150px;
-  top: 15px;
-  left: 10px;
+  // top: 15px;
+  // left: 10px;
 }
 
-.developers-name {
-  position: absolute;
-  top: 10px;
-  left: 180px;
+.developers-details {
+  padding-left: 15px;
 }
+// .developers-name {
+//   position: absolute;
+//   top: 10px;
+//   left: 180px;
+// }
 
-.developers-city {
-  position: absolute;
-  top: 35px;
-  left: 180px;
-}
+// .developers-city {
+//   position: absolute;
+//   top: 35px;
+//   left: 180px;
+// }
 
-.developers-summary {
-  position: absolute;
-  top: 50px;
-  left: 180px;
-}
+// .developers-summary {
+//   position: absolute;
+//   top: 50px;
+//   left: 180px;
+// }
 
-.developers-skill {
-  position: absolute;
-  left: 180px;
-  top: 130px;
-}
+// .developers-skill {
+//   position: absolute;
+//   left: 180px;
+//   top: 130px;
+// }
 
+
+// .developers-card {
+//   position: relative;
+//   width: 800px;
+//   height: 175px;
+//   background-color: white;
+//   color: #073648;
+//   margin: 0px 15px 10px 25px;
+// }
 
 .developers-card {
-  position: relative;
-  width: 800px;
-  height: 175px;
-  background-color: white;
-  color: #073648;
-  margin: 0px 15px 10px 25px;
+display: flex;
 }
 
 .developer-profile{
@@ -138,11 +122,6 @@
 }
 
 
-
-.top-developers {
-  text-align:center;
-  padding-bottom: 20px;
-}
 .card {
   margin-bottom: 20px;
 }
@@ -152,9 +131,9 @@
   justify-content: center;
   align-items:center;
   flex-direction: column;
-  background-color: #073648;
+  background-color: #192f44;
   color: rgb(255,255,255);
-  height: 100vh;
+  height: 300px;
   // text-align: center;
   // vertical-align: center;
 }
