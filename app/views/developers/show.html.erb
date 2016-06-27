@@ -1,8 +1,17 @@
-<div class="developer-profile">
-  <%= cl_image_tag(@developer.resume.photo, height: 150, width: 150, crop: :fill, class:"profile-avatar") %>
-  <%= render 'personal_info', developer: @developer %>
+<br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-1 col-xs-12 col-sm-10">
+      <div class="card">
+        <div class="developer-profile">
+          <%= cl_image_tag(@developer.resume.photo, height: 150, width: 150, crop: :fill, class:"profile-avatar") %>
+          <%= render 'personal_info', developer: @developer %>
+        </div>
+        <% if @developer.resume %>
+        <%= render 'resume', developer: @developer %>
+        <% end %>
+      </div>
+    </div>
+  </div>
 </div>
-
-<% if @developer.resume %>
-  <%= render 'resume', developer: @developer %>
-<% end %>
+<br><br>
