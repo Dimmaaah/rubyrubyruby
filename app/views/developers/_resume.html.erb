@@ -1,14 +1,15 @@
+<br>
 <div class="developer-work">
-  <h3 class="resume-partial-title">Summary</h3>
+  <h4 class="resume-partial-title">Summary</h4>
  <%= developer.resume.summary %>
  <hr>
-  <h3 class="resume-partial-title">Skills</h3>
+  <h4 class="resume-partial-title">Skills</h4>
     <% developer.resume.skills.each do |skill| %>
       <span class="skill"><%= skill.name %></span>
     <% end %>
     <hr>
   <div class="work-experience">
-    <h3 class="resume-partial-title">Work Experience</h3>
+    <h4 class="resume-partial-title">Work Experience</h4>
     <% developer.resume.work_experiences.each do |experience| %>
     <strong><%= experience.job_title %></strong>  <br>
     <%= experience.company_name %> <br>
@@ -18,7 +19,7 @@
   </div>
 
   <hr>
- <div class="education"><h3 class="resume-partial-title">Education</h3>
+ <div class="education"><h4 class="resume-partial-title">Education</h4>
   <% developer.resume.educations.each do |education| %>
      <strong><%= education.name %></strong> <br>
       <%= education.school %>
@@ -29,7 +30,7 @@
 </div>
 
   <hr>
-  <h3 class="resume-partial-title">Projects</h3>
+  <h4 class="resume-partial-title">Projects</h4>
     <% developer.resume.projects.each do |project| %>
       <strong><%= project.name %></strong> <br>
       <%= project.description %> <br> <br>

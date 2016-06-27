@@ -10,8 +10,7 @@
 }
 
 .resume-partial-title {
-  color: #AF1C2C;
-  opacity: 0.3;
+  color: #D23333;
 }
 
 .edit-profile-btn {
@@ -27,9 +26,6 @@
   margin-left:auto;
 }
 
-.profile-name {
-  margin: 6px 0px;
-}
 
 .date {
   font-size:15px;
@@ -78,25 +74,19 @@
 }
 
 .developer-profile{
-  padding: 10px;
-  margin: 10px 0px 0px 30px;
-  display: flex;
-  background-color: white;
-  width:800px;
-  height:200px;
   display:flex;
 }
 
 .basic-info {
-  padding-left: 20px;
+  padding-left: 25px;
 }
 
-.developer-work {
-  width: 800px;
-  background-color: white;
-  padding: 10px;
-  margin: 10px 0px 20px 30px;
-}
+// .developer-work {
+//   width: 800px;
+//   background-color: white;
+//   padding: 10px;
+//   margin: 10px 0px 20px 30px;
+// }
 
 .developer-name {
   font-size: 30px;
@@ -167,6 +157,29 @@
 .developer-signup-title {
   margin-top: 5px;
   margin-bottom: 25px;
+}
+
+// profile
+.profile-city {
+  font-size: 14px;
+  color: #7d7d7d;
+}
+
+.profile-email, .profile-phone, .profile-linkedin {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 10px;
+  display: inline;
+  padding-left: 7px;
+}
+
+.profile-name {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+
+.profile-icon {
+  width: 14px;
 }
 
 @mixin clearfix() {
