@@ -49,6 +49,15 @@ padding-top: 30px;
 padding-bottom: 30px;
 }
 
+.jobs-title{
+  color: #D23333;
+}
+
+.jobs-title:hover {
+    color: #D23333;
+  text-decoration: underline;
+}
+
 .jobs-card{
     min-height: 170px;
 }
