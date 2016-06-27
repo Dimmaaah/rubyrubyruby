@@ -2,9 +2,14 @@
   <h3 class= "profile-name"><%= "#{developer.first_name} #{developer.last_name}" %></h3>
   <p class= "profile-city"><%= developer.city %></p>
   <p class= "profile-email"><%= developer.email %></p>
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 2aa304b7f383b8346f0c556d6772a4386fc429fd
   <% if developer.resume %>
     <%= developer.resume.linkedin %>
-
-
+    <p class= "profile-phone"><%= developer.resume.phone %></p>
+    <p class= "profile-city"><%= developer.city %></p>
   <% end %>
 </div>

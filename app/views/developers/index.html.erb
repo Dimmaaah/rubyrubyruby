@@ -1,45 +1,49 @@
-<h1 class="top-developers">𝕋𝕠𝕡 𝔻𝕖𝕧𝕖𝕝𝕠𝕡𝕖𝕣𝕤 𝕠𝕗 𝕥𝕙𝕖 𝕄𝕠𝕟𝕥𝕙
-</h1>
-
-
-
-<div class="developers-wrapper">
-  <div class="container">
-    <div class="row">
-      <div class="col-xs-12 col-sm-6">
-        <div class="developers-list"><% @developers.each do |developer| %>
-          <div class="developers-card">
-            <%= link_to developer_path(developer) do %>
-            <%= cl_image_tag(developer.resume.photo, class:"developers-avatar") %>
-            <% end %>
-            <div class="developers-name"><%= link_to developer_path(developer) do %>
-              <%= "#{developer.first_name} #{developer.last_name}" %>
-              <% end %>
-            </div>
-            <div class="developers-city"><%= developer.city %></div>
-            <div class="developers-summary"><%= truncate developer.resume.summary, length: 200 %></div>
-            <div class="developers-skill">
-              <% developer.resume.skills.each do |skill| %>
-              <span class="skill"><%= skill.name %></span>
-              <% end %>
-            </div>
-
-          </div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-1 col-xs-12 col-sm-10">
+      <h3>Top Developers of the Month</h3>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <% @developers.each do |developer| %>
+    <div class="col-xs-12 col-sm-offset-1 col-xs-12 col-sm-10">
+      <div class="developers-card card">
+        <div>
+          <%= link_to developer_path(developer) do %>
+          <%= cl_image_tag(developer.resume.photo, class:"developers-avatar") %>
           <% end %>
+        </div>
+        <div class="developers-details">
+          <div>
+            <%= link_to developer_path(developer), class: "developers-name" do %>
+            <%= "#{developer.first_name} #{developer.last_name}" %>
+            <% end %>
+          </div>
+          <div class="developers-city"><%= developer.city%></div>
+          <br>
+          <div class="developers-summary"><%= truncate developer.resume.summary, length: 200 %></div>
+          <div class="developers-skill">
+            <% developer.resume.skills.each do |skill| %>
+            <span class="skill"><%= skill.name %></span>
+            <% end %>
+          </div>
         </div>
       </div>
     </div>
+    <% end %>
   </div>
-
-
 </div>
+
+<br><br>
 
 
 
 <div class="developers-wrapper-signup">
   <p>Developers are in the highlight to be be approached by the employers</p>
-  <p>Do not have a developer profile yet?</p>
+  <h3 class="developer-signup-title">Do not have a developer profile yet?</h3>
 
-  <%= link_to "Sign up", new_user_registration_path, class:"signup" %><br />
+  <%= link_to "Sign up", new_user_registration_path, class:"navbar-wagon-button" %>
 
 </div>
