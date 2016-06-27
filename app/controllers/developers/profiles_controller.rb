@@ -3,7 +3,7 @@ class Developers::ProfilesController < ApplicationController
 
   def edit
     @user = current_user
-    @resume = current_user.resume || Resume.new
+    @resume = @user.resume || @user.build_resume
   end
 
   def show

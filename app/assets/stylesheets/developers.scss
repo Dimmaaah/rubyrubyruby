@@ -4,7 +4,8 @@
 //
 
 .resume-partial-title {
-  color: #AFB2B5;
+  color: #AF1C2C;
+  opacity: 0.3;
 }
 
 .edit-profile-btn {
@@ -48,6 +49,11 @@
 
 .developers-details {
   padding-left: 15px;
+.developers-city {
+  position: absolute;
+  top: 28px;
+  left: 180px;
+  font-size:14px
 }
 // .developers-name {
 //   position: absolute;
