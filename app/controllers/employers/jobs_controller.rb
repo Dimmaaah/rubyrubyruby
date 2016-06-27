@@ -20,14 +20,25 @@ class Employers::JobsController < ApplicationController
   end
 
   def edit
+     @skills = Skill.order(:name)
+    @job = current_employer.jobs.find(params[:id])
   end
 
   def update
+     @skills = Skill.order(:name)
+    @job = current_employer.jobs.find(params[:id])
+    if @job.update(job_params)
 
+      flash[:notice] = "Job succesfully updated"
+      redirect_to employers_job_path(@job)
+    else
+      flash.now[:alert] = "well that didn't work"
+      render :edit
+    end
   end
 
   def show
-    @job = Job.find(params[:id])
+    @job = current_employer.jobs.find(params[:id])
     @applications = @job.applications
   end
 

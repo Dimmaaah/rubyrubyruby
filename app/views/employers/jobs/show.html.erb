@@ -34,13 +34,10 @@ received applications:
     <%= @job.location %>
   </div>
   <div class="vacancy">
-    <% @job.skills.each do |skill| %>
-    <span><%= skill.name %></span>
-    <% end %>
 
     <br>
 
-
+  <%= link_to 'Edit Job', edit_employers_job_path, class: "edit-profile-btn" %>
 
   </div>
 </div>
