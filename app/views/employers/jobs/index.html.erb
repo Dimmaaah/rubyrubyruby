@@ -1,15 +1,30 @@
+
+
+
 <div class="container">
-    <h1>These are all your jobs</h1>
-      <% @jobs.each do |job| %>
-<div class="jjob">
-
-        <%= link_to "#{job.job_title}", employers_job_path(job) %>
+  <div class="row">
+    <div class="col-xs-12">
+      <h3>Apply</h3>
+    </div>
+  </div>
+  <br>
+  <div class="row">
+    <% @jobs.each do |job| %>
+    <div class="col-xs-12 col-md-6 col-lg-4">
+      <div class="card jobs-card">
+        <h4> <%= link_to "#{job.job_title}", job_path(job) %> </h4>
+        <%= job.location %>
         <br>
-        <%= job.location %> <br>
+        <%= job.employer.company_name %>
+        <br>
       </div>
-        <% end %>
-</div>  <!-- end of container -->
-
+    </div>
+    <% end %>
+  </div>
+</div>
+<br><br>
 
 
 <%= link_to "Add a new Job", new_employers_job_path, class: "btn_new_job"%>
+
+
