@@ -1,8 +1,10 @@
 <h1>Here you'll find only 1 post</h1>
-<%= @post.title %>
+<p><h1><%= @post.title %></h1></p>
+
 <%= @post.content %>
 <h2>
   <%= @post.comments.count %>
+
   <%= render @post.comments %>
 </h2>
 <h3>
