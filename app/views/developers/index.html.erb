@@ -1,14 +1,14 @@
 <br>
 <div class="container">
   <div class="row">
-    <div class="col-xs-12">
+    <div class="col-xs-12 col-sm-offset-1 col-xs-12 col-sm-10">
       <h3>Top Developers of the Month</h3>
     </div>
   </div>
   <br>
   <div class="row">
     <% @developers.each do |developer| %>
-    <div class="col-xs-12 col-md-6">
+    <div class="col-xs-12 col-sm-offset-1 col-xs-12 col-sm-10">
       <div class="developers-card card">
         <div>
           <%= link_to developer_path(developer) do %>
@@ -16,11 +16,12 @@
           <% end %>
         </div>
         <div class="developers-details">
-          <div class="developers-name"><%= link_to developer_path(developer) do %>
+          <div>
+            <%= link_to developer_path(developer), class: "developers-name" do %>
             <%= "#{developer.first_name} #{developer.last_name}" %>
             <% end %>
           </div>
-          <div class="developers-city"><%= developer.city %></div>
+          <div class="developers-city"><%= developer.city%></div>
           <br>
           <div class="developers-summary"><%= truncate developer.resume.summary, length: 200 %></div>
           <div class="developers-skill">
@@ -35,14 +36,14 @@
   </div>
 </div>
 
-
+<br><br>
 
 
 
 <div class="developers-wrapper-signup">
   <p>Developers are in the highlight to be be approached by the employers</p>
-  <p>Do not have a developer profile yet?</p>
+  <h3 class="developer-signup-title">Do not have a developer profile yet?</h3>
 
-  <%= link_to "Sign up", new_user_registration_path, class:"signup" %><br />
+  <%= link_to "Sign up", new_user_registration_path, class:"navbar-wagon-button" %>
 
 </div>
