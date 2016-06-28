@@ -271,6 +271,7 @@ elyas = User.create!(
   city: "Amsterdam",
   password: "lewagon",
   password_confirmation: "lewagon"
+  photo: File.open(Rails.root.join("db/seeds/images/elyas.jpg")
   )
 
 elyas.create_resume!(
