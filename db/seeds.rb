@@ -181,15 +181,15 @@ umer = User.create!(
   street: "Nassaukade 307",
   city: "Amsterdam",
   password: "lewagon",
-  password_confirmation: "lewagon"
+  password_confirmation: "lewagon",
+  photo: File.open(Rails.root.join("db/seeds/images/umer.jpg"))
   )
 
 umer.create_resume!(
   phone: Faker::PhoneNumber.phone_number,
   summary: "An enthusiast to learn, adapt to change and excel in all the opportunities provided. Carrying great communication, entrepreneurial, innovative and creative skills.",
   linkedin: "https://www.linkedin.com/in/umer-saqib-96788486",
-  years_of_experience: 3,
-  photo: File.open(Rails.root.join("db/seeds/images/umer.jpg"))
+  years_of_experience: 3
   )
 
 # Samy
@@ -203,15 +203,15 @@ samy = User.create!(
   street: "Nassaukade 307",
   city: "Amsterdam",
   password: "lewagon",
-  password_confirmation: "lewagon"
+  password_confirmation: "lewagon",
+  photo: File.open(Rails.root.join("db/seeds/images/samy.jpg"))
   )
 
 samy.create_resume!(
   phone: Faker::PhoneNumber.phone_number,
   summary: "Like to code and cook at skello. Alumni from batch 18 of Le Wagon Paris.",
   linkedin: "https://www.linkedin.com/in/samy-amar-02a181a4",
-  years_of_experience: 2,
-  photo: File.open(Rails.root.join("db/seeds/images/samy.jpg"))
+  years_of_experience: 2
   )
 
 # Mike
@@ -225,7 +225,8 @@ mike = User.create!(
   street: "Nassaukade 307",
   city: "Amsterdam",
   password: "lewagon",
-  password_confirmation: "lewagon"
+  password_confirmation: "lewagon",
+  photo: File.open(Rails.root.join("db/seeds/images/mike.jpg"))
   )
 
 mike.create_resume!(
@@ -233,7 +234,6 @@ mike.create_resume!(
   summary: "Young and ambitious, two of my main assets are my analytical skills and my communication skills. After having worked 4 years as SME's Manager, I looked for a new challenge. I'm currently working for Bisnode Belgium, European leader in direct and data marketing.",
   linkedin: "https://www.linkedin.com/in/michaelhanot",
   years_of_experience: 2,
-  photo: File.open(Rails.root.join("db/seeds/images/mike.jpg"))
   )
 
 # Vallentino
@@ -247,7 +247,8 @@ vallentino = User.create!(
   street: "Nassaukade 307",
   city: "Amsterdam",
   password: "lewagon",
-  password_confirmation: "lewagon"
+  password_confirmation: "lewagon",
+  photo: File.open(Rails.root.join("db/seeds/images/vallentino.jpg"))
   )
 
 vallentino.create_resume!(
@@ -256,7 +257,6 @@ vallentino.create_resume!(
   Project Management / IT Architectures / Cloud Computing / Enterprise Resource Planning",
   linkedin: "https://www.linkedin.com/in/vallentino",
   years_of_experience: 1,
-  photo: File.open(Rails.root.join("db/seeds/images/vallentino.jpg"))
   )
 
 # Elyas
@@ -270,7 +270,8 @@ elyas = User.create!(
   street: "Nassaukade 307",
   city: "Amsterdam",
   password: "lewagon",
-  password_confirmation: "lewagon"
+  password_confirmation: "lewagon",
+  photo: File.open(Rails.root.join("db/seeds/images/elyas.jpg"))
   )
 
 elyas.create_resume!(
@@ -278,7 +279,6 @@ elyas.create_resume!(
   summary: "Rubyist in training",
   linkedin: "https://www.linkedin.com/in/elyas-boumejjane-47b2b476",
   years_of_experience: 2,
-  photo: File.open(Rails.root.join("db/seeds/images/elyas.jpg"))
   )
 
 ########################################
