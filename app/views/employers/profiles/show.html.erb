@@ -1,8 +1,8 @@
 <div id="employer_container" class="container">
-  <div id="employer_form" class="form">
+  <div class="employer_form" class="form">
     <h2 class="main-text">Employer Information</h2>
     <div class="info_employer">
-      <%= @employer.company_name %>
+      <%= @employer.company_name.capitalize %>
       </div>
       <br>
       <div class="info_employer">
@@ -22,14 +22,14 @@
       </div>
       <br>
       <div class="info_employer">
-        <%= @employer.city %>
+        <%= @employer.city.capitalize %>
       </div>
       <br>
       <div class="info_employer">
-        <%= @employer.country %>
+        <%= @employer.country.capitalize %>
       </div>
       <br>
-        <%= link_to "edit", edit_employers_profile_path, class: "signup"%>
+        <%= link_to "Edit", edit_employers_profile_path, class:"fill-button"%>
       <!-- <button id="employer_btn" class="btn">
       </button> -->
     </div>
