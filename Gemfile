@@ -14,7 +14,9 @@ gem 'cloudinary'
 gem 'carrierwave'
 gem 'cocoon'
 gem 'country_select'
+gem 'pg_search'
 
+# ASSETS
 gem 'sass-rails'
 gem 'jquery-rails'
 gem 'uglifier'
