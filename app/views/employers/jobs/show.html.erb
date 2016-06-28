@@ -3,40 +3,43 @@
   <h1 class="h1-test">here you'll find the jobs that are created by the current employer</h1>
 
 
-    received applications:
-  <div class="row">
+    <h3>Received Applications</h3>
+
       <% @applications.each do |application| %>
 
       <div class="card jobs-card">
 
-      <h3 class="jobs-title"><%= application.user.first_name.capitalize %>
-      <%= application.user.last_name.capitalize %></h3>
-      <br>
-      <%= application.user.email %>
-      <br>
-     <%= application.description %>
-     <br>
-     <a href="<%= application.user.resume.photo %>" class="navbar-wagon-button btn" target="_blank">Resume</a>
+        <h3 class="jobs-title"><%= application.user.first_name.capitalize %>
+          <%= application.user.last_name.capitalize %></h3>
+          <br>
+          <%= application.user.email %>
+          <br>
+          <%= application.description %>
+          <br>
+          <a href="<%= application.user.resume.photo %>" class="navbar-wagon-button btn" target="_blank">Resume</a>
 
-     <a href="<%= application.user.photo %>"></a>
-     </div>
+          <a href="<%= application.user.photo %>"></a>
+        </div>
 
-    <% end %>
-</div>
+        <% end %>
+
+
 
 <div class="card jobs-card">
   <div class="vacancy">
-    <br><br>
       <div class="vacancy">
-      <h2> <%= @job.job_title %></h2>
+      <h2 class="jobs-title"> <%= @job.job_title %></h2>
       </div>
+      <br>
         <% @job.skills.each do |skill| %>
         <span class="skill"><%= skill.name %></span>
         <% end %>
       </div>
+      <br>
       <div class="vacancy">
         <%= @job.location.capitalize %>
       </div>
+      <br>
       <div class="vacancy">
         <%= @job.salary %>
       </div>
@@ -47,5 +50,6 @@
               <br>
             <%= link_to 'Edit Job', edit_employers_job_path, class: "edit-profile-btn" %>
         </div>
+</div>
 </div>
 </div>
