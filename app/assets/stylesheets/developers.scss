@@ -3,6 +3,15 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //
 
+.form-inline {
+  text-align: center;
+}
+.wrapper-resume-edit{
+  max-width: 800px;
+  text-align: center;
+  margin: auto;
+}
+
 .resume-partial-title {
   color: #D23333;
 }
@@ -50,10 +59,8 @@
 .developers-avatar {
   // position: absolute;
   border-radius:50%;
-  min-width: 150px;
+  max-width: 150px;
   height: 150px;
-  // top: 15px;
-  // left: 10px;
 }
 
 .developers-details {
@@ -97,7 +104,31 @@
   width:inherit;
 }
 
+.top-developers-card {
+  width : 250px;
+  height : 170px;
+  // position: relative;
+  text-align: center;
+}
 
+.card-image {
+ text-align: center;
+}
+
+.card-name {
+    text-align:center;
+    align-items: center;
+    color: #d23333;
+}
+
+.card-city {
+  text-align: center;
+}
+
+.top-developers {
+  text-align:center;
+  padding-bottom: 20px;
+}
 .card {
   margin-bottom: 20px;
 }
