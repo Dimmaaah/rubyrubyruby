@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
 
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  #
+  validates :birth_date, inclusion: { in: (Date.new(1900, 1, 1)..(Date.today - 16.years)), allow_nil:false }
 
   accepts_nested_attributes_for :resume, reject_if: :all_blank, allow_destroy: true
 

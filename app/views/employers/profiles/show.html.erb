@@ -2,10 +2,12 @@
 <div class="card">
   <div class="employer_form" class="form">
     <h2 class="main-text">Employer Information</h2>
-    <div class="info_employer">
-      <%= @employer.company_name.capitalize %>
+    <% if @employer.company_name.present? %>
+      <div class="info_employer">
+        <%= @employer.company_name.capitalize %>
       </div>
       <br>
+    <% end %>
       <div class="info_employer">
         <%= @employer.email %>
       </div>
@@ -22,14 +24,18 @@
         <%= @employer.postcode %>
       </div>
       <br>
-      <div class="info_employer">
-        <%= @employer.city.capitalize %>
-      </div>
-      <br>
-      <div class="info_employer">
-        <%= @employer.country.capitalize %>
-      </div>
-      <br>
+      <% if @employer.city.present? %>
+        <div class="info_employer">
+          <%= @employer.city.capitalize %>
+        </div>
+        <br>
+      <% end %>
+      <% if @employer.country.present? %>
+        <div class="info_employer">
+          <%= @employer.country.capitalize %>
+        </div>
+        <br>
+      <% end %>
         <%= link_to "Edit", edit_employers_profile_path, class:"fill-button"%>
       <!-- <button id="employer_btn" class="btn">
       </button> -->
