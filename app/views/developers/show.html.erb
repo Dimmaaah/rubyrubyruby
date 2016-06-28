@@ -7,31 +7,10 @@
 
 
            <% if employer_signed_in? %>
-          <a href="#" class= "navbar-wagon-button btn" data-toggle="modal" data-target="#myModal">contact developer</a>
+          <a href="mailto:<%= @developer.email %>?SUBJECT=An employer is interested in you!" class= "navbar-wagon-button btn">contact developer</a>
           <% elsif !employer_signed_in? %>
           <%= link_to "Apply", new_user_session_path, class: "navbar-wagon-button btn" %>
           <% end %>
-
-          <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Applying to this job</h4>
-                </div>
-                <div class="modal-body">
-                  <p>State your message. </p>
-
-
-                </div>
-
-                <div class="modal-footer">
-                  <button type="button" class="navbar-wagon-button btn" data-dismiss="modal">Close</button>
-                </div>
-              </div>
-            </div>
-          </div>
-
 
 
 
