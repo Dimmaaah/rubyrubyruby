@@ -1,4 +1,6 @@
 <div class="container">
+<br>  <br>
+<div class="card">
 <h1>Here employers can upload a vacancy </h1>
   <%= simple_form_for [:employers, @job] do |f| %>
     <%= f.input :job_title %>
@@ -9,5 +11,6 @@
     <%= f.association :skills, collection: @skills %>
     <%= f.button :submit, class:"fill-button" %>
   <% end %>
+  </div>
 </div>
 <!-- data-role="tagsinput" -->
