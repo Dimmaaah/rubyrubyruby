@@ -4,15 +4,22 @@
 
 
     received applications:
-
+  <div class="row">
       <% @applications.each do |application| %>
+<div class="col-xs-12 col-md-6 col-lg-4">
+      <div class="card jobs-card">
+
       <%= application.user.first_name %>
       <%= application.user.last_name %>
       <br>
       <%= application.user.email %>
      <%= application.description %>
+     <a href="<%= application.user.resume.photo %>" target="_blank">resume</a>
+     <a href="<%= application.user.photo %>"></a>
+     </div>
+     </div>
     <% end %>
-
+</div>
 
 
   <div class="vacancy">

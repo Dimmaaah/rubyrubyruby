@@ -35,6 +35,8 @@ class Developers::ProfilesController < ApplicationController
       :street,
       :birth_date,
       :city,
+      :photo,
+      :photo_cache,
       resume_attributes: [
         :id,
         :summary,
