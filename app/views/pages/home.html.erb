@@ -34,7 +34,7 @@
    <div class="col-xs-12 col-sm-6 col-md-3">
      <div class="card top-developers-card">
        <%= link_to developer_path(developer) do %>
-      <div class="card-image"><%= cl_image_tag(developer.resume.photo, class:"avatar-developer") %></div>
+      <div class="card-image"><%= cl_image_tag(developer.photo, class:"avatar-developer") %></div>
        <% end %>
        <%= link_to developer_path(developer) do %>
       <div class="card-name"><%= "#{developer.first_name} #{developer.last_name}" %>
