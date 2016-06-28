@@ -3,6 +3,9 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //
 
+.form-inline {
+  text-align: center;
+}
 .wrapper-resume-edit{
   max-width: 800px;
   text-align: center;
@@ -117,6 +120,7 @@
 .card-name {
     text-align:center;
     align-items: center;
+    color: #d23333;
 }
 
 .card-city {
