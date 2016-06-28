@@ -26,9 +26,13 @@
           <br>
 
           <% if user_signed_in? %>
-          <a href="#" class= "navbar-wagon-button btn" data-toggle="modal" data-target="#myModal">Apply to this job</a>
+            <% if current_user.resume %>
+              <a href="#" class= "navbar-wagon-button btn" data-toggle="modal" data-target="#myModal">Apply to this job</a>
+            <% else %>
+              <%= link_to "Add your resume before you can apply", edit_developers_profile_path, class: "navbar-wagon-button btn" %>
+            <% end %>
           <% elsif !employer_signed_in? %>
-          <%= link_to "Apply", new_user_session_path, class: "navbar-wagon-button btn" %>
+            <%= link_to "Apply", new_user_session_path, class: "navbar-wagon-button btn" %>
           <% end %>
 
           <div class="modal fade" id="myModal" role="dialog">
