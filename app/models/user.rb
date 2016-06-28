@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   has_many :applications
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
+  #
+  validates :birth_date, inclusion: { in: (1900..2016), alllow_nil:false }
 
   accepts_nested_attributes_for :resume, reject_if: :all_blank, allow_destroy: true
 
