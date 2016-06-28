@@ -31,38 +31,31 @@
             </div>
           </div>
         </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <%= cl_image_tag(@developer.resume.photo, height: 150, width: 150, crop: :fill, class:"profile-avatar") %>
+        <%= render 'personal_info', developer: @developer %>
       </div>
+      <% if @developer.resume %>
+      <%= render 'resume', developer: @developer %>
+      <% end %>
     </div>
   </div>
-</div>
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<%= cl_image_tag(@developer.resume.photo, height: 150, width: 150, crop: :fill, class:"profile-avatar") %>
-<%= render 'personal_info', developer: @developer %>
-</div>
-<% if @developer.resume %>
-<%= render 'resume', developer: @developer %>
-<% end %>
-</div>
-</div>
 </div>
 </div>
 <br><br>
