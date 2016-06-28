@@ -5,12 +5,14 @@
     <div class="wrapper-resume-edit">
       <h2>Edit your resume</h2>
       <br>
-      <%= cl_image_tag @resume.photo, class: "photo", height: 150, width: 150, crop: :fill %>
 
       <%= simple_form_for @user, url: developers_profile_path, method: :patch do |f|  %>
 
       <%= f.simple_fields_for :resume do |resume_form| %>
       <div class="card">
+      <br>
+       <%= cl_image_tag @user.photo, class: "photo", height: 150, width: 150, crop: :fill %>
+          <br>
         <h3>Add Personal info</h3>
         <br>
         <div id="personal info">
@@ -59,7 +61,7 @@
         </div>
         <% end %>
         <br><br>
-        <%= f.submit %>
+        <%= f.submit class: "navbar-wagon-button btn" %>
         <% end %>
       </div>
       <br><br><br>
