@@ -6,38 +6,32 @@
         <div class="developer-profile">
 
 
-           <% if employer_signed_in? %>
-          <a href="mailto:<%= @developer.email %>?SUBJECT=An employer is interested in you!" class= "navbar-wagon-button btn">contact developer</a>
-          <% elsif !employer_signed_in? %>
-          <%= link_to "Apply", new_user_session_path, class: "navbar-wagon-button btn" %>
-          <% end %>
+
+         <% if employer_signed_in? %>
+         <a href="mailto:<%= @developer.email %>?SUBJECT=An employer is interested in you!" class= "navbar-wagon-button btn">contact developer</a>
+         <% elsif !employer_signed_in? %>
+         <%= link_to "Apply", new_user_session_path, class: "navbar-wagon-button btn" %>
+         <% end %>
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <%= cl_image_tag(@developer.resume.photo, height: 150, width: 150, crop: :fill, class:"profile-avatar") %>
-          <%= render 'personal_info', developer: @developer %>
+         <div class="modal-footer">
+          <button type="button" class="navbar-wagon-button btn" data-dismiss="modal">Close</button>
         </div>
-        <% if @developer.resume %>
-        <%= render 'resume', developer: @developer %>
-        <% end %>
       </div>
     </div>
   </div>
+
+
+
+  <%= cl_image_tag(@developer.resume.photo, height: 150, width: 150, crop: :fill, class:"profile-avatar") %>
+  <%= render 'personal_info', developer: @developer %>
+</div>
+<% if @developer.resume %>
+<%= render 'resume', developer: @developer %>
+<% end %>
+</div>
+</div>
+</div>
 </div>
 <br><br>
