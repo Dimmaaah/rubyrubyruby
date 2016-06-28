@@ -39,13 +39,13 @@
                   <h4 class="modal-title">Applying to this job</h4>
                 </div>
                 <div class="modal-body">
-                  <p>SHOW YOUR MOTIVATON. </p>
+                  <p>ADD YOUR MOTIVATON. </p>
                   <%= simple_form_for [@job, @application], url: job_applications_path(@job), method: :post do |f| %>
                   <%= f.input :description %>
                   <%= f.button :submit %>
                   <% end %>
-
                 </div>
+
                 <div class="modal-footer">
                   <button type="button" class="navbar-wagon-button btn" data-dismiss="modal">Close</button>
                 </div>
