@@ -1,65 +1,69 @@
+<br>
+<div class="container">
+ <div class="row">
+   <div class="col-xs-12 col-sm-offset-1 col-xs-12 col-sm-10">
+    <div class="wrapper-resume-edit">
+      <h2>Edit your resume</h2>
+      <br>
+      <%= cl_image_tag @resume.photo, class: "photo", height: 150, width: 150, crop: :fill %>
 
+      <%= simple_form_for @user, url: developers_profile_path, method: :patch do |f|  %>
 
+      <%= f.simple_fields_for :resume do |resume_form| %>
+      <div class="card">
+        <h3>Add Personal info</h3>
+        <br>
+        <div id="personal info">
+          <%= f.input :job_title %>
+          <br>
+          <%= resume_form.input :photo %>
+          <%= resume_form.input :photo_cache, as: :hidden %>
+          <br>
+          <%= f.input :street %>
+          <%= f.input :birth_date %>
+          <%= f.input :city %>
+        </div>
 
-<div class="wrapper-resume-edit">
-<h1>Edition of your resume</h1>
-<%= cl_image_tag @resume.photo, class: "photo", height: 150, width: 150, crop: :fill %>
+        <%= resume_form.input :summary %>
+        <%= resume_form.input :linkedin %>
+        <%= resume_form.association :skills %>
 
-  <%= simple_form_for @user, url: developers_profile_path, method: :patch do |f|  %>
-  <%= f.input :photo %>
-  <%= f.input :photo_cache, as: :hidden %>
+        <h3>Education</h3>
+        <div id="educations">
+          <%= resume_form.simple_fields_for :educations do |education| %>
+          <%= render 'education_fields', f: education %>
+          <% end %>
+          <div class="links">
+            <%= link_to_add_association 'add education', resume_form, :educations %>
+          </div>
+        </div>
 
+        <h3>Projects</h3>
+        <div id="projects">
+          <%= resume_form.simple_fields_for :projects do |project| %>
+          <%= render 'project_fields', f: project %>
+          <% end %>
+          <div class="links">
+            <%= link_to_add_association 'add project', resume_form, :projects %>
+          </div>
+        </div>
 
-  <%= f.simple_fields_for :resume do |resume_form| %>
-  <h1>Add Personal info</h1>
-  <div id="personal info">
-    <%= f.input :job_title %>
-
-    <%= resume_form.input :photo, label:"Resume" %>
-    <%= resume_form.input :photo_cache, as: :hidden %>
-
-    <%= f.input :street %>
-    <%= f.input :birth_date %>
-    <%= f.input :city %>
-  </div>
-
-  <%= resume_form.input :summary %>
-  <%= resume_form.input :linkedin %>
-  <%= resume_form.association :skills %>
-
-  <h2>Education</h2>
-  <div id="educations">
-    <%= resume_form.simple_fields_for :educations do |education| %>
-    <%= render 'education_fields', f: education %>
-    <% end %>
-    <div class="links">
-      <%= link_to_add_association 'add education', resume_form, :educations %>
+        <h3>Work Experience</h3>
+        <div id="work_experiences">
+          <%= resume_form.simple_fields_for :work_experiences do |work_experience| %>
+          <%= render 'work_experience_fields', f: work_experience %>
+          <% end %>
+          <div class="links">
+            <%= link_to_add_association 'add work Experience', resume_form, :work_experiences %>
+          </div>
+        </div>
+        <% end %>
+        <br><br>
+        <%= f.submit %>
+        <% end %>
+      </div>
+      <br><br><br>
     </div>
   </div>
-
-  <h2>Projects</h2>
-  <div id="projects">
-    <%= resume_form.simple_fields_for :projects do |project| %>
-    <%= render 'project_fields', f: project %>
-    <% end %>
-    <div class="links">
-      <%= link_to_add_association 'add project', resume_form, :projects %>
-    </div>
-  </div>
-
-  <h2>Work Experience</h2>
-  <div id="work_experiences">
-    <%= resume_form.simple_fields_for :work_experiences do |work_experience| %>
-    <%= render 'work_experience_fields', f: work_experience %>
-    <% end %>
-    <div class="links">
-      <%= link_to_add_association 'add work Experience', resume_form, :work_experiences %>
-    </div>
-  </div>
-  <% end %>
-
-  <%= f.submit %>
-
-<% end %>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br>
+</div>
