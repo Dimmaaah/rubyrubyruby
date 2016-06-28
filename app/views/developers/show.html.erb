@@ -21,10 +21,7 @@
                 </div>
                 <div class="modal-body">
                   <p>ADD YOUR MOTIVATON. </p>
-                  <%= simple_form_for [@job, @application], url: job_applications_path(@job), method: :post do |f| %>
-                  <%= f.input :description %>
-                  <%= f.button :submit %>
-                  <% end %>
+
                 </div>
 
                 <div class="modal-footer">
