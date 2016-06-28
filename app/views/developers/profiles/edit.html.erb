@@ -24,7 +24,7 @@
           <%= resume_form.input :photo_cache, as: :hidden %>
           <br>
           <%= f.input :street %>
-          <%= f.input :birth_date %>
+          <%= f.input :birth_date, start_year: Date.today.year - 80 %>
           <%= f.input :city %>
         </div>
 
