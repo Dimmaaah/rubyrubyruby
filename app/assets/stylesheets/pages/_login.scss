@@ -1,31 +1,47 @@
-.login-form {
-  text-align: center;
-}
 
 .form-inputs {
-  width:300px;
   margin: auto;
 }
 
 .linkedin{
 
- width:220px;
  margin: 20px auto;
 }
 
-.signup {
-  display: inline-block;
-  background-color: #AF1C2C;
+.fill-button {
+  background-color: #D23333;
   margin-bottom: 10px;
   color: white;
-  border: 1px solid #999999;
-  padding: 10px 15px;
-  border-radius: 50px;
+  padding: 8px 12px;
+  border-radius:3px;
+  border: none;
   font-weight: lighter;
+  transition: background-color 300ms;
 }
-.signup:hover {
-  opacity: 1;
-  text-decoration: none;
-  color: #999999;
+.fill-button:hover {
+  color: white;
+  background-color: #ac2626;
 }
 
+.outline-button {
+  border: 1px solid #D23333;
+  margin-bottom: 10px;
+  color: #D23333;
+  padding: 8px 12px;
+  border-radius:3px;
+  font-weight: lighter;
+  transition: background-color 300ms;
+}
+
+.outline-button:hover {
+  color: white;
+  background-color: #D23333;
+}
+
+.gray {
+  color: #7d7d7d;
+}
+
+.signup-button {
+  margin-left: 12px;
+}

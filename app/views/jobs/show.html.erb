@@ -1,49 +1,59 @@
+<br>
 <div class="container">
   <div class="row">
     <div class="col-xs-12">
       <h3>Apply to this job</h3>
     </div>
   </div>
-  <div class="white-container">
-    <div class="container">
-      <div class="row">
-        <div class="col-xs-12">
-          <div class="vacancy">
+  <br>
+  <div class="card">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="vacancy">
 
+          <h3> <%= @job.job_title %></h3>
+             <% @job.skills.each do |skill| %>
+                <span class="skill"><%= skill.name %></span>
+                <% end %>
 
-            <h3> <%= @job.job_title %></h3>
-            <h4> <%= @job.location %></h4>
-            <h4><%= @job.salary %></h4>
-            <br>
-            <%= @job.description %>
+          <h4> <%= @job.location %></h4>
+          <h4><%= @job.salary %></h4>
+          <br>
 
-            <% if user_signed_in? %>
-            <a href="#" class= "navbar-wagon-item navbar-wagon-button btn" data-toggle="modal" data-target="#myModal">Apply to this job</a>
-            <% elsif !employer_signed_in? %>
-            <%= link_to "Apply to this job", new_user_session_path, class: "btn btn-primary" %>
-            <% end %>
+          <%= @job.description %>
+          <br>
+          <br>
+          <br>
 
-            <div class="modal fade" id="myModal" role="dialog">
-              <div class="modal-dialog">
-                <div class="modal-content">
-                  <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h4 class="modal-title">Applying to this job</h4>
-                  </div>
-                  <div class="modal-body">
-                    <p>SHOW YOUR MOTIVATON. </p>
-                    <%= simple_form_for [@job, @application], url: job_applications_path(@job), method: :post do |f| %>
-                    <%= f.input :description %>
-                    <%= f.button :submit %>
-                    <% end %>
+          <% if user_signed_in? %>
+          <a href="#" class= "navbar-wagon-button btn" data-toggle="modal" data-target="#myModal">Apply to this job</a>
+          <% elsif !employer_signed_in? %>
+          <%= link_to "Apply", new_user_session_path, class: "navbar-wagon-button btn" %>
+          <% end %>
 
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                  </div>
+          <div class="modal fade" id="myModal" role="dialog">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Applying to this job</h4>
+                </div>
+                <div class="modal-body">
+                  <p>ADD YOUR MOTIVATON. </p>
+                  <%= simple_form_for [@job, @application], url: job_applications_path(@job), method: :post do |f| %>
+                  <%= f.input :description %>
+                  <%= f.button :submit %>
+                  <% end %>
                 </div>
 
+                <div class="modal-footer">
+                  <button type="button" class="navbar-wagon-button btn" data-dismiss="modal">Close</button>
+                </div>
               </div>
             </div>
           </div>
         </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,12 @@
 class Job < ActiveRecord::Base
+  include PgSearch
+
+  pg_search_scope :search,
+    against: [:job_title],
+    associated_against: {
+      skills: [:name]
+    }
+
   belongs_to :employer
 
   has_many :applications,  dependent: :destroy

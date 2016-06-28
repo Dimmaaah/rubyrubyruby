@@ -3,9 +3,17 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 //
 
+.form-inline {
+  text-align: left;
+}
+.wrapper-resume-edit{
+  max-width: 800px;
+  text-align: left;
+  margin: auto;
+}
+
 .resume-partial-title {
-  color: #AF1C2C;
-  opacity: 0.3;
+  color: #D23333;
 }
 
 .edit-profile-btn {
@@ -20,9 +28,8 @@
   height:45px;
   margin-left:auto;
 }
-
-.profile-name {
-  margin: 6px 0px;
+.photo {
+  border-radius: 50%;
 }
 
 .date {
@@ -52,10 +59,8 @@
 .developers-avatar {
   // position: absolute;
   border-radius:50%;
-  min-width: 150px;
+  max-width: 150px;
   height: 150px;
-  // top: 15px;
-  // left: 10px;
 }
 
 .developers-details {
@@ -72,25 +77,19 @@
 }
 
 .developer-profile{
-  padding: 10px;
-  margin: 10px 0px 0px 30px;
-  display: flex;
-  background-color: white;
-  width:800px;
-  height:200px;
   display:flex;
 }
 
 .basic-info {
-  padding-left: 20px;
+  padding-left: 25px;
 }
 
-.developer-work {
-  width: 800px;
-  background-color: white;
-  padding: 10px;
-  margin: 10px 0px 20px 30px;
-}
+// .developer-work {
+//   width: 800px;
+//   background-color: white;
+//   padding: 10px;
+//   margin: 10px 0px 20px 30px;
+// }
 
 .developer-name {
   font-size: 30px;
@@ -105,7 +104,31 @@
   width:inherit;
 }
 
+.top-developers-card {
+  width : 250px;
+  height : 170px;
+  // position: relative;
+  text-align: center;
+}
 
+.card-image {
+ text-align: center;
+}
+
+.card-name {
+    text-align:center;
+    align-items: center;
+    color: #d23333;
+}
+
+.card-city {
+  text-align: center;
+}
+
+.top-developers {
+  text-align:center;
+  padding-bottom: 20px;
+}
 .card {
   margin-bottom: 20px;
 }
@@ -138,6 +161,29 @@
 .developer-signup-title {
   margin-top: 5px;
   margin-bottom: 25px;
+}
+
+// profile
+.profile-city {
+  font-size: 14px;
+  color: #7d7d7d;
+}
+
+.profile-email, .profile-phone, .profile-linkedin {
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 10px;
+  display: inline;
+  padding-left: 7px;
+}
+
+.profile-name {
+  margin: 0 0 5px 0;
+  font-weight: bold;
+}
+
+.profile-icon {
+  width: 14px;
 }
 
 @mixin clearfix() {

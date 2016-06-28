@@ -53,7 +53,7 @@ lewagon = Employer.create!(
   phone: "+319485748439",
   password: "lewagon",
   password_confirmation: "lewagon"
-)
+  )
 
 springest = Employer.create!(
   company_name: "Springest",
@@ -67,7 +67,7 @@ springest = Employer.create!(
   phone: "+319485748439",
   password: "lewagon",
   password_confirmation: "lewagon"
-)
+  )
 
 ########################################
 #
@@ -78,22 +78,71 @@ springest = Employer.create!(
 puts "Creating jobs..."
 
 rails_coach = lewagon.jobs.create!(
-  job_title: "Ruby on Rails Coach",
-  salary: 50000,
-  description: "Should be creative and like to teach",
-  location: "Amsterdam"
-)
+  job_title: "Ruby on Rails back-end developer",
+  salary: "-",
+  location: "Amsterdam",
+  description: "The right candidate will be a talented Ruby on Rails Developer
+  who has a passion for programming, possesses a good understanding of agile practices, and desire to join a team of exceptional developers
+  working in a fast-paced environment to deliver first-class software."
+  )
 
 rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby"))
 rails_coach.job_skills.create!(skill: Skill.find_by_name("back-end"))
 rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby on rails"))
 
+
+rails_coach = lewagon.jobs.create!(
+  job_title: "Ruby on Rails front-end developer",
+  salary: "-",
+  location: "Amsterdam",
+  description: "The right candidate will be a talented Ruby on Rails Developer
+  who has a passion for programming, possesses a good understanding of agile practices, and desire to join a team of exceptional developers
+  working in a fast-paced environment to deliver first-class software."
+  )
+
+rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("back-end"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby on rails"))
+
+
+rails_coach = lewagon.jobs.create!(
+  job_title: "Ruby on Rails Junior back-end developer",
+  salary: "-",
+  location: "Amsterdam",
+  description: "The right candidate will be a talented Ruby on Rails Developer
+  who has a passion for programming, possesses a good understanding of agile practices, and desire to join a team of exceptional developers
+  working in a fast-paced environment to deliver first-class software."
+  )
+
+rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("back-end"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby on rails"))
+
+
+rails_coach = lewagon.jobs.create!(
+  job_title: "Junior web developer",
+  salary: "-",
+  location: "Amsterdam",
+  description: "The right candidate will be a talented Ruby on Rails Developer
+  who has a passion for programming, possesses a good understanding of agile practices, and desire to join a team of exceptional developers
+  working in a fast-paced environment to deliver first-class software."
+  )
+
+rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("back-end"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby on rails"))
+
+
+
+
+
 frontend_coach = lewagon.jobs.create!(
   job_title: "Front-end Coach",
   salary: 25000,
-  description: "Should be creative, creative and creative!",
-  location: "Amsterdam"
-)
+  location: "Amsterdam",
+  description: "Should be creative, creative and creative!"
+
+  )
 
 frontend_coach.job_skills.create!(skill: Skill.find_by_name("HTML"))
 frontend_coach.job_skills.create!(skill: Skill.find_by_name("CSS"))
@@ -102,9 +151,10 @@ frontend_coach.job_skills.create!(skill: Skill.find_by_name("javascript"))
 backend_dev = springest.jobs.create!(
   job_title: "Back-end Ruby on Rails developer",
   salary: 50000,
-  description: "Should be creative and have 5 years of experience",
-  location: "Amsterdam"
-)
+  location: "Amsterdam",
+  description: "Should be creative and have 5 years of experience"
+
+  )
 
 backend_dev.job_skills.create!(skill: Skill.find_by_name("ruby"))
 backend_dev.job_skills.create!(skill: Skill.find_by_name("back-end"))
@@ -131,16 +181,16 @@ umer = User.create!(
   street: "Nassaukade 307",
   city: "Amsterdam",
   password: "lewagon",
-  password_confirmation: "lewagon"
-)
+  password_confirmation: "lewagon",
+  photo: File.open(Rails.root.join("db/seeds/images/umer.jpg"))
+  )
 
 umer.create_resume!(
   phone: Faker::PhoneNumber.phone_number,
   summary: "An enthusiast to learn, adapt to change and excel in all the opportunities provided. Carrying great communication, entrepreneurial, innovative and creative skills.",
   linkedin: "https://www.linkedin.com/in/umer-saqib-96788486",
-  years_of_experience: 3,
-  photo: File.open(Rails.root.join("db/seeds/images/umer.jpg"))
-)
+  years_of_experience: 3
+  )
 
 # Samy
 
@@ -153,16 +203,16 @@ samy = User.create!(
   street: "Nassaukade 307",
   city: "Amsterdam",
   password: "lewagon",
-  password_confirmation: "lewagon"
-)
+  password_confirmation: "lewagon",
+  photo: File.open(Rails.root.join("db/seeds/images/samy.jpg"))
+  )
 
 samy.create_resume!(
   phone: Faker::PhoneNumber.phone_number,
   summary: "Like to code and cook at skello. Alumni from batch 18 of Le Wagon Paris.",
   linkedin: "https://www.linkedin.com/in/samy-amar-02a181a4",
-  years_of_experience: 2,
-  photo: File.open(Rails.root.join("db/seeds/images/samy.jpg"))
-)
+  years_of_experience: 2
+  )
 
 # Mike
 
@@ -175,16 +225,16 @@ mike = User.create!(
   street: "Nassaukade 307",
   city: "Amsterdam",
   password: "lewagon",
-  password_confirmation: "lewagon"
-)
+  password_confirmation: "lewagon",
+  photo: File.open(Rails.root.join("db/seeds/images/mike.jpg"))
+  )
 
 mike.create_resume!(
   phone: Faker::PhoneNumber.phone_number,
   summary: "Young and ambitious, two of my main assets are my analytical skills and my communication skills. After having worked 4 years as SME's Manager, I looked for a new challenge. I'm currently working for Bisnode Belgium, European leader in direct and data marketing.",
   linkedin: "https://www.linkedin.com/in/michaelhanot",
   years_of_experience: 2,
-  photo: File.open(Rails.root.join("db/seeds/images/mike.jpg"))
-)
+  )
 
 # Vallentino
 
@@ -197,17 +247,17 @@ vallentino = User.create!(
   street: "Nassaukade 307",
   city: "Amsterdam",
   password: "lewagon",
-  password_confirmation: "lewagon"
-)
+  password_confirmation: "lewagon",
+  photo: File.open(Rails.root.join("db/seeds/images/vallentino.jpg"))
+  )
 
 vallentino.create_resume!(
   phone: Faker::PhoneNumber.phone_number,
   summary: "Structured / Accurate / Responsible / Communicative / Team player / Able to see the big picture
-Project Management / IT Architectures / Cloud Computing / Enterprise Resource Planning",
+  Project Management / IT Architectures / Cloud Computing / Enterprise Resource Planning",
   linkedin: "https://www.linkedin.com/in/vallentino",
   years_of_experience: 1,
-  photo: File.open(Rails.root.join("db/seeds/images/vallentino.jpg"))
-)
+  )
 
 # Elyas
 
@@ -220,16 +270,16 @@ elyas = User.create!(
   street: "Nassaukade 307",
   city: "Amsterdam",
   password: "lewagon",
-  password_confirmation: "lewagon"
-)
+  password_confirmation: "lewagon",
+  photo: File.open(Rails.root.join("db/seeds/images/elyas.jpg"))
+  )
 
 elyas.create_resume!(
   phone: Faker::PhoneNumber.phone_number,
   summary: "Rubyist in training",
   linkedin: "https://www.linkedin.com/in/elyas-boumejjane-47b2b476",
   years_of_experience: 2,
-  photo: File.open(Rails.root.join("db/seeds/images/elyas.jpg"))
-)
+  )
 
 ########################################
 #
@@ -251,7 +301,7 @@ User.all.each do |user|
       company_name: Faker::Company.name,
       job_title: "#{Faker::Company.profession} #{titles.sample}",
       description: description
-    )
+      )
   end
 
   # EDUCATIONS
@@ -263,7 +313,7 @@ User.all.each do |user|
       school: Faker::University.name,
       start_date: date,
       end_date: (date + 1.year),
-    )
+      )
   end
 
   # PROJECTS
@@ -271,13 +321,13 @@ User.all.each do |user|
     user.resume.projects.create!(
       name: Faker::Commerce.product_name,
       description: Faker::Company.catch_phrase
-    )
+      )
   end
 
   # SKILLS
   (1..8).to_a.sample.times do |index|
     user.resume.resume_skills.create!(
       skill: Skill.find_by_name(skill_names[index])
-    )
+      )
   end
 end

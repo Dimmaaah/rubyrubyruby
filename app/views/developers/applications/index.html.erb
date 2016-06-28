@@ -1,18 +1,25 @@
 <div class="container">
-<h1>here you can find the applications</h1>
-<br><br><br>
+  <br><br>
+  <h1>Here you find the jobs which you applied to</h1>
+  <br>
+  <div class="row">
+   <% @applications.each do |application| %>
+   <div class="col-xs-12 col-sm-offset-1 col-xs-12 col-sm-10">
+    <div class="developers-card card">
+      <div class="developers-details">
+        <div>
 
-<% @applications.each do |application| %>
+          <h3 class="jobs-title"> <%= application.job.job_title %></h3>
+          <p> <%= application.job.employer.company_name %> </p>
 
-<div class="onejob">
-
-
-  <%= application.job_id %>
-  <%= application.job.job_title %>
-
-<br>
+          <br>
+          applied <%= time_ago_in_words(application.created_at) %> ago
+          <br>
+          <!-- <%= application.description %> -->
+        </div>
+      </div>
+    </div>
+  </div>
+        <% end %>
 </div>
-<%end%>
 
-
-</div>

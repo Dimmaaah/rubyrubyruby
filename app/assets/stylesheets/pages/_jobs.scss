@@ -1,20 +1,6 @@
-.vacancy{
-
-}
-
-
-.h1 {
-  font-size: 80px;
-  font-family: monospace;
-  padding: 45px;
-  padding-color: blue;
-}
-
-
-.jjob {
-  margin-bottom: 20px;
-  padding: 30px;
-  font-size: 26px;
+.vacancy h3 {
+  padding-bottom: 50px;
+  padding-top: -20px;
 }
 
 .btn_new_job {
@@ -27,8 +13,8 @@
 }
 
 #skilltags {
-  padding: 15px;
-  background-color: grey;
+  padding: 10px;
+  background-color: #AC2626;
   border-radius: 6px;
   margin: 5px;
   display: inline-block;
@@ -47,6 +33,15 @@ background-color: white;
 border-top: 1px solid #efefef;
 padding-top: 30px;
 padding-bottom: 30px;
+}
+
+.jobs-title{
+  color: #D23333;
+}
+
+.jobs-title:hover {
+    color: #D23333;
+  text-decoration: underline;
 }
 
 .jobs-card{
