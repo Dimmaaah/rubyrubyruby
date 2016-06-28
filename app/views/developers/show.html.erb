@@ -6,59 +6,63 @@
         <div class="developer-profile">
 
 
-           <% if employer_signed_in? %>
-          <a href="#" class= "navbar-wagon-button btn" data-toggle="modal" data-target="#myModal">contact developer</a>
-          <% elsif !employer_signed_in? %>
-          <%= link_to "Apply", new_user_session_path, class: "navbar-wagon-button btn" %>
-          <% end %>
+         <% if employer_signed_in? %>
+         <a href="#" class= "navbar-wagon-button btn" data-toggle="modal" data-target="#myModal">contact developer</a>
+         <% elsif !employer_signed_in? %>
+         <%= link_to "Apply", new_user_session_path, class: "navbar-wagon-button btn" %>
+         <% end %>
 
-          <div class="modal fade" id="myModal" role="dialog">
-            <div class="modal-dialog">
-              <div class="modal-content">
-                <div class="modal-header">
-                  <button type="button" class="close" data-dismiss="modal">&times;</button>
-                  <h4 class="modal-title">Applying to this job</h4>
-                </div>
-                <div class="modal-body">
-                  <p>State your message. </p>
+         <div class="modal fade" id="myModal" role="dialog">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h4 class="modal-title">Applying to this job</h4>
+              </div>
+              <div class="modal-body">
+                <p>State your message. </p>
 
 
-                </div>
+              </div>
 
-                <div class="modal-footer">
-                  <button type="button" class="navbar-wagon-button btn" data-dismiss="modal">Close</button>
-                </div>
+              <div class="modal-footer">
+                <button type="button" class="navbar-wagon-button btn" data-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-          <%= cl_image_tag(@developer.resume.photo, height: 150, width: 150, crop: :fill, class:"profile-avatar") %>
-          <%= render 'personal_info', developer: @developer %>
         </div>
-        <% if @developer.resume %>
-        <%= render 'resume', developer: @developer %>
-        <% end %>
       </div>
     </div>
   </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<%= cl_image_tag(@developer.resume.photo, height: 150, width: 150, crop: :fill, class:"profile-avatar") %>
+<%= render 'personal_info', developer: @developer %>
+</div>
+<% if @developer.resume %>
+<%= render 'resume', developer: @developer %>
+<% end %>
+</div>
+</div>
+</div>
 </div>
 <br><br>
