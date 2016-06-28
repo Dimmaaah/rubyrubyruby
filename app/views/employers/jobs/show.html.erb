@@ -6,22 +6,25 @@
     received applications:
   <div class="row">
       <% @applications.each do |application| %>
-<div class="col-xs-12 col-md-6 col-lg-4">
+
       <div class="card jobs-card">
 
-      <%= application.user.first_name %>
-      <%= application.user.last_name %>
+      <h3 class="jobs-title"><%= application.user.first_name.capitalize %>
+      <%= application.user.last_name.capitalize %></h3>
       <br>
       <%= application.user.email %>
+      <br>
      <%= application.description %>
-     <a href="<%= application.user.resume.photo %>" target="_blank">resume</a>
+     <br>
+     <a href="<%= application.user.resume.photo %>" class="navbar-wagon-button btn" target="_blank">Resume</a>
+
      <a href="<%= application.user.photo %>"></a>
      </div>
-     </div>
+
     <% end %>
 </div>
 
-
+<div class="card jobs-card">
   <div class="vacancy">
     <br><br>
       <div class="vacancy">
@@ -44,4 +47,5 @@
               <br>
             <%= link_to 'Edit Job', edit_employers_job_path, class: "edit-profile-btn" %>
         </div>
+</div>
 </div>
