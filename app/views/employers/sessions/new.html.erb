@@ -14,13 +14,16 @@
         </div>
 
         <div class="form-actions">
-        <%= f.button :submit, "Log in", class:"fill-button"%>
+          <%= f.button :submit, "Log in", class:"fill-button"%>
         </div>
         <% end %>
-
+        <br>
         <%= render "users/shared/links" %>
-
-
+        <br>
+        <div>
+          Don't have an account yet?
+          <a class="outline-button signup-button" href="/employers/sign_up">Sign up</a><br><br>
+        </div>
       </div>
     </div>
   </div>
