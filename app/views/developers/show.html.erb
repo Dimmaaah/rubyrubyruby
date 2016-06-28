@@ -6,8 +6,8 @@
         <div class="developer-profile">
 
 
-           <% if user_signed_in? %>
-          <a href="#" class= "navbar-wagon-button btn" data-toggle="modal" data-target="#myModal">Apply to this job</a>
+           <% if employer_signed_in? %>
+          <a href="#" class= "navbar-wagon-button btn" data-toggle="modal" data-target="#myModal">contact developer</a>
           <% elsif !employer_signed_in? %>
           <%= link_to "Apply", new_user_session_path, class: "navbar-wagon-button btn" %>
           <% end %>
@@ -20,7 +20,8 @@
                   <h4 class="modal-title">Applying to this job</h4>
                 </div>
                 <div class="modal-body">
-                  <p>ADD YOUR MOTIVATON. </p>
+                  <p>State your message. </p>
+
 
                 </div>
 
