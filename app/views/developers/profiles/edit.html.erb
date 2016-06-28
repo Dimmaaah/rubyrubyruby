@@ -16,9 +16,11 @@
         <h3>Add Personal info</h3>
         <br>
         <div id="personal info">
+          <%= f.input :photo, label: "Profile picture" %>
+          <%= f.input :photo_cache, as: :hidden %>
           <%= f.input :job_title %>
           <br>
-          <%= resume_form.input :photo %>
+          <%= resume_form.input :photo, label: "Resume" %>
           <%= resume_form.input :photo_cache, as: :hidden %>
           <br>
           <%= f.input :street %>
