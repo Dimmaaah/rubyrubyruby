@@ -11,11 +11,11 @@ class User < ActiveRecord::Base
 
   mount_uploader :photo, PhotoUploader
 
-  TEMP_EMAIL_PREFIX = 'change@me'
-  TEMP_EMAIL_REGEX = /\Achange@me/
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:linkedin]
 
- validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
+  TEMP_EMAIL_PREFIX = 'change@me'
+  TEMP_EMAIL_REGEX = /\Achange@me/
+  validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
 
  def self.find_for_oauth(auth, signed_in_resource = nil)
 

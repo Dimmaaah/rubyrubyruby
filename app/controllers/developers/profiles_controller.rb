@@ -32,6 +32,7 @@ class Developers::ProfilesController < ApplicationController
   def user_params
     params.require(:user).permit(
       :job_title,
+      :email,
       :street,
       :birth_date,
       :city,
