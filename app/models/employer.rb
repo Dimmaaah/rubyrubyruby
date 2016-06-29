@@ -3,6 +3,8 @@ class Employer < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   has_many :jobs, dependent: :destroy
 
+  mount_uploader :photo, PhotoUploader
+
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 end
