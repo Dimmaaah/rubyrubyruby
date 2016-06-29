@@ -1,0 +1,5 @@
+# Config / meta.yml
+meta_title: "RubyRubyRuby"
+meta_description: "If you can't beat ruby, join the community."
+meta_image: "ruby1.png"  # A picture in your app / assets / images /
+twitter_account: "@RubyRubyRuby001"  # essential for Twitter Cards
