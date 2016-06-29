@@ -9,17 +9,17 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   #
-  validates :birth_date, inclusion: { in: (Date.new(1900, 1, 1)..(Date.today - 16.years)), allow_nil:false }
+  validates :birth_date, inclusion: { in: (Date.new(1900, 1, 1)..(Date.today - 16.years)), allow_nil:false }, on: :update
 
   accepts_nested_attributes_for :resume, reject_if: :all_blank, allow_destroy: true
 
   mount_uploader :photo, PhotoUploader
 
-  TEMP_EMAIL_PREFIX = 'change@me'
-  TEMP_EMAIL_REGEX = /\Achange@me/
   devise :database_authenticatable, :registerable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable, :omniauth_providers => [:linkedin]
 
- validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
+  TEMP_EMAIL_PREFIX = 'change@me'
+  TEMP_EMAIL_REGEX = /\Achange@me/
+  validates_format_of :email, :without => TEMP_EMAIL_REGEX, on: :update
 
  def self.find_for_oauth(auth, signed_in_resource = nil)
 

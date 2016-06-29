@@ -4,14 +4,13 @@
     <div class="col-xs-12 col-sm-offset-1 col-xs-12 col-sm-10">
       <div class="card">
         <div class="developer-profile">
-
-
-
+          <!--  this will be the button to contact a developer        <div class="comment">
          <% if employer_signed_in? %>
          <a href="mailto:<%= @developer.email %>?SUBJECT=An employer is interested in you!" class= "navbar-wagon-button btn">contact developer</a>
          <% elsif !employer_signed_in? %>
          <%= link_to "Apply", new_user_session_path, class: "navbar-wagon-button btn" %>
          <% end %>
+         </div>-->
 
          <%= cl_image_tag(@developer.photo, height: 150, width: 150, crop: :fill, class:"profile-avatar") %>
          <%= render 'personal_info', developer: @developer %>
