@@ -5,6 +5,8 @@
 
     <%= simple_form_for @employer, url: employers_profile_path, method: :patch, class: "form-horizontal" do |f|  %>
     <%= f.input :company_name %>
+    <%= f.input :photo, label: 'Company Logo' %>
+    <%= f.input :photo_cache, as: :hidden %>
     <%= f.input :email %>
     <%= f.input :phone %>
     <%= f.input :country %>

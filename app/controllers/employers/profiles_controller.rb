@@ -28,7 +28,9 @@ def employer_params
   :postcode,
   :city,
   :country,
-  :phone
+  :phone,
+  :photo,
+  :photo_cache
   )
 end
 

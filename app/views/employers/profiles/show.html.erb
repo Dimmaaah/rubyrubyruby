@@ -2,8 +2,11 @@
 <div class="card">
   <div class="employer_form" class="form">
     <h2 class="main-text">Employer Information</h2>
+    <% if @employer.photo.present? %>
+      <%= cl_image_tag(@employer.photo, height: 150, width: 150, crop: :fill, class:"profile-avatar") %>
+    <% end %>
     <% if @employer.company_name.present? %>
-      <div class="info_employer">
+      <div class="info_employer"> <br>
         <%= @employer.company_name.capitalize %>
       </div>
       <br>
