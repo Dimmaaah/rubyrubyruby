@@ -54,6 +54,24 @@ lewagon = Employer.create!(
   password: "lewagon",
   password_confirmation: "lewagon"
   )
+Kpn = Employer.create!(
+  company_name: "Kpn",
+  first_name: "Banne",
+  last_name: "Bollet",
+  email: "1anne@lewagon.org",
+  street: "rijswijkstraat 9",
+  postcode: "1062dp",
+  city: "Amsterdam",
+  country: "Nederlands",
+  phone: "+319485748439",
+  password: "lewagon",
+  password_confirmation: "lewagon"
+  )
+
+
+
+
+
 
 springest = Employer.create!(
   company_name: "Springest",
