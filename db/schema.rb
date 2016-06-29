@@ -11,7 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+
 ActiveRecord::Schema.define(version: 20160629121430) do
+
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -26,6 +28,17 @@ ActiveRecord::Schema.define(version: 20160629121430) do
 
   add_index "applications", ["job_id"], name: "index_applications_on_job_id", using: :btree
   add_index "applications", ["user_id"], name: "index_applications_on_user_id", using: :btree
+
+  create_table "comments", force: :cascade do |t|
+    t.text     "comment"
+    t.integer  "post_id"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "comments", ["post_id"], name: "index_comments_on_post_id", using: :btree
+  add_index "comments", ["user_id"], name: "index_comments_on_user_id", using: :btree
 
   create_table "educations", force: :cascade do |t|
     t.string   "name"
@@ -98,6 +111,21 @@ ActiveRecord::Schema.define(version: 20160629121430) do
 
   add_index "jobs", ["employer_id"], name: "index_jobs_on_employer_id", using: :btree
 
+  create_table "messages", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "user_id"
+  end
+
   create_table "projects", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
@@ -150,6 +178,13 @@ ActiveRecord::Schema.define(version: 20160629121430) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "tickets", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -190,6 +225,8 @@ ActiveRecord::Schema.define(version: 20160629121430) do
 
   add_foreign_key "applications", "jobs"
   add_foreign_key "applications", "users"
+  add_foreign_key "comments", "posts"
+  add_foreign_key "comments", "users"
   add_foreign_key "educations", "resumes"
   add_foreign_key "identities", "users"
   add_foreign_key "job_skills", "jobs"

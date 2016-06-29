@@ -34,21 +34,28 @@
   <meta itemprop="image" content="<%= image_url(meta_image) %>">
 </head>
 <body>
+<!--
+<% if user_signed_in? %>
+<%= link_to "New Post", new_post_path %>
+<% else %>
+<%= link_to "Sign Up", new_user_registration_path %>
+<% end %>
   <div class="body-wrapper">
+  -->
     <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
 
 
     <%= yield %>
+    <%= render 'shared/footer' %>
     <%= javascript_include_tag 'application' %>
-  </div>
-  <%= render 'shared/footer' %>
-  <script>
-    $(function() {
-      $("#navbar-wagon-menu").click(function() {
-        $(".dropdown-menu").toggle();
-      })
-    })
-  </script>
+    <script>
+      $(function() {
+        $("#navbar-wagon-menu").click(function() {
+          $(".dropdown-menu").toggle();
+        });
+      });
+    </script>
+
 </body>
 </html>

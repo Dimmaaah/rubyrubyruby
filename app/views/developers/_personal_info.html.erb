@@ -1,11 +1,13 @@
 <div class="basic-info">
   <h3 class= "profile-name"><%= "#{developer.first_name} #{developer.last_name}" %></h3>
   <p class= "profile-city"><%= developer.city %></p>
+
   <br>
   <div>
     <%= image_tag("mail.svg", class: "profile-icon")%>
     <p class= "profile-email"><%= developer.email %></p>
   </div>
+
   <% if developer.resume %>
   <div>
   <%= image_tag("linkedin.svg", class: "profile-icon")%>
