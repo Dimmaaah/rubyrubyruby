@@ -1,6 +1,13 @@
 <div class="container">
 <br><br>
+
+<h2>My Profile</h2><br>
+<div class="card">
+<br><br>
+  <div class="row">
+    <div class="col-xs-12 col-sm-offset-1 col-xs-12 col-sm-10">
 <div class="developer-profile">
+
   <% if @resume %>
     <%= cl_image_tag(@user.photo, class: "photo", height: 150, width: 150, crop: :fill, class:"profile-avatar") %>
   <% else %>
@@ -17,4 +24,9 @@
 <% else %>
   <%= link_to "Add your resume", edit_developers_profile_path %>
 <% end %>
+<br><br>
+<%= link_to 'Edit profile', edit_developers_profile_path, class: "navbar-wagon-button btn" %>
+</div>
+</div>
+</div>
 </div>
