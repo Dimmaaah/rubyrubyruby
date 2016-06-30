@@ -2,7 +2,7 @@
     <h1>Tickets</h1>
       <% @posts.each do |post|%>
     <div class="card">
-      <h2 class="jobs-title"><%= link_to post.title, post %> </h2>
+      <h2><%= link_to post.title, post, class:"ticket-title" %> </h2>
       <p>
       Published
       <%= time_ago_in_words(post.created_at) %>

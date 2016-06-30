@@ -98,7 +98,7 @@ puts "Creating jobs..."
 
 rails_coach = lewagon.jobs.create!(
   job_title: "Ruby on Rails back-end developer",
-  salary: "-",
+  salary: "2400",
   location: "Amsterdam",
   description: "The right candidate will be a talented Ruby on Rails Developer
   who has a passion for programming, possesses a good understanding of agile practices, and desire to join a team of exceptional developers
@@ -112,7 +112,7 @@ rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby on rails"))
 
 rails_coach = lewagon.jobs.create!(
   job_title: "Ruby on Rails front-end developer",
-  salary: "-",
+  salary: "3500",
   location: "Amsterdam",
   description: "The right candidate will be a talented Ruby on Rails Developer
   who has a passion for programming, possesses a good understanding of agile practices, and desire to join a team of exceptional developers
@@ -126,7 +126,7 @@ rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby on rails"))
 
 rails_coach = lewagon.jobs.create!(
   job_title: "Ruby on Rails Junior back-end developer",
-  salary: "-",
+  salary: "3700",
   location: "Amsterdam",
   description: "The right candidate will be a talented Ruby on Rails Developer
   who has a passion for programming, possesses a good understanding of agile practices, and desire to join a team of exceptional developers
@@ -140,7 +140,7 @@ rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby on rails"))
 
 rails_coach = lewagon.jobs.create!(
   job_title: "Junior web developer",
-  salary: "-",
+  salary: "4000",
   location: "Amsterdam",
   description: "The right candidate will be a talented Ruby on Rails Developer
   who has a passion for programming, possesses a good understanding of agile practices, and desire to join a team of exceptional developers
@@ -157,7 +157,7 @@ rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby on rails"))
 
 frontend_coach = lewagon.jobs.create!(
   job_title: "Front-end Coach",
-  salary: 25000,
+  salary: "5000",
   location: "Hague",
   description: "Should be creative, creative and creative!"
 
@@ -169,10 +169,9 @@ frontend_coach.job_skills.create!(skill: Skill.find_by_name("javascript"))
 
 backend_dev = springest.jobs.create!(
   job_title: "Back-end Ruby on Rails developer",
-  salary: 50000,
+  salary: "5000",
   location: "Rotterdam",
   description: "Should be creative and have 5 years of experience"
-
   )
 
 backend_dev.job_skills.create!(skill: Skill.find_by_name("ruby"))
