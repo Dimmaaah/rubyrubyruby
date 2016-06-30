@@ -4,20 +4,18 @@
     <h2 class="main-text">Employer Information</h2>
 
     <%= simple_form_for @employer, url: employers_profile_path, method: :patch, class: "form-horizontal" do |f|  %>
-    <%= f.input :company_name %>
-    <%= f.input :photo, label: 'Company Logo' %>
-    <%= f.input :photo_cache, as: :hidden %>
-    <%= f.input :email %>
-    <%= f.input :phone %>
-    <%= f.input :country %>
-    <%= f.input :city %>
-    <%= f.input :street %>
-    <%= f.input :postcode %>
+      <%= f.input :company_name %>
+      <%= f.input :photo, label: 'Company Logo' %>
+      <%= f.input :photo_cache, as: :hidden %>
+      <%= f.input :email %>
+      <%= f.input :phone %>
+      <%= f.input :country %>
+      <%= f.input :city %>
+      <%= f.input :street %>
+      <%= f.input :postcode %>
 
-
-      <%= f.submit class: "navbar-wagon-button btn" %>
-      <% end %>
+      <%= f.submit "Update", class: "btn update-employer" %>
+    <% end %>
 
     </div>
   </div>
-</div>
