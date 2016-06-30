@@ -16,6 +16,7 @@ puts "Cleaning database..."
 
 Employer.destroy_all
 Job.destroy_all
+Post.destroy_all
 User.destroy_all
 Skill.destroy_all
 

@@ -8,7 +8,7 @@
     <div class="developers-card card">
       <div class="developers-details">
         <div>
-          <%= link_to job_path(@job) do %>
+          <%= link_to job_path(application.job) do %>
           <h3 class="jobs-title"> <%= application.job.job_title %></h3>
           <% end %>
           <p> <%= application.job.employer.company_name %> </p>

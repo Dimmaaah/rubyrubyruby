@@ -20,5 +20,7 @@ class JobsController < ApplicationController
     @application = Application.new
     @job = Job.find(params[:id])
     @employer = @job.employer
+
+    store_location_for(:user, job_path(@job))
   end
 end

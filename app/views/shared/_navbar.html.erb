@@ -42,7 +42,13 @@
 
           <li>
             <%= link_to edit_developers_profile_path do %>
-            <i class="fa fa-home"></i>  <%= t ".profile", default: "Edit Resume" %>
+            <i class="fa fa-pencil" aria-hidden="true"></i>  <%= t ".profile", default: "Edit Resume" %>
+            <% end %>
+          </li>
+
+          <li>
+          <%= link_to developers_applications_path do %>
+            <i class="fa fa-check-square-o" aria-hidden="true"></i>  <%= t ".profile", default: "My Applications" %>
             <% end %>
           </li>
 
@@ -124,6 +130,8 @@
 
         <!-- Tickets text link -->
 
+       <li><%= link_to t("tickets", default: "Tickets"), posts_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+
         <!-- Different navigation if login or not -->
         <% if user_signed_in? %>
           <li>
@@ -135,6 +143,12 @@
           <li>
             <%= link_to developers_profile_path do %>
             <i class="fa fa-home"></i>  <%= t ".profile", default: "Edit Resume" %>
+            <% end %>
+          </li>
+
+          <li>
+          <%= link_to developers_applications_path do %>
+            <i class="fa fa-check-square-o" aria-hidden="true"></i>  <%= t ".profile", default: "My Applications" %>
             <% end %>
           </li>
 
