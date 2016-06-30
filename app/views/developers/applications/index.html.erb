@@ -1,6 +1,6 @@
 <div class="container">
   <br><br>
-  <h1>Here you find the jobs which you applied to</h1>
+  <h1>My Applications</h1>
   <br>
   <div class="row">
    <% @applications.each do |application| %>
@@ -8,8 +8,9 @@
     <div class="developers-card card">
       <div class="developers-details">
         <div>
-
+          <%= link_to job_path(@job) do %>
           <h3 class="jobs-title"> <%= application.job.job_title %></h3>
+          <% end %>
           <p> <%= application.job.employer.company_name %> </p>
 
           <br>
@@ -21,5 +22,5 @@
     </div>
   </div>
         <% end %>
+</div><br><br><br><br><br><br><br><br><br><br>
 </div>
-
