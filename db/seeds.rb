@@ -27,7 +27,7 @@ Skill.destroy_all
 
 puts "Creating skills..."
 
-skill_names = ["ruby", "ruby on rails", "back-end", "front-end", "SQL", "CSS", "javascript", "HTML"]
+skill_names = ["Ruby", "Ruby on Rails", "Back-end", "Front-end", "SQL", "CSS", "Javascript", "HTML", "PostgreSQL", "Bootstrap", "APIs" ]
 
 skill_names.each do |name|
   Skill.create!(name: name)
@@ -157,7 +157,7 @@ rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby on rails"))
 frontend_coach = lewagon.jobs.create!(
   job_title: "Front-end Coach",
   salary: 25000,
-  location: "Amsterdam",
+  location: "Hague",
   description: "Should be creative, creative and creative!"
 
   )
@@ -169,7 +169,7 @@ frontend_coach.job_skills.create!(skill: Skill.find_by_name("javascript"))
 backend_dev = springest.jobs.create!(
   job_title: "Back-end Ruby on Rails developer",
   salary: 50000,
-  location: "Amsterdam",
+  location: "Rotterdam",
   description: "Should be creative and have 5 years of experience"
 
   )
@@ -298,6 +298,75 @@ elyas.create_resume!(
   linkedin: "https://www.linkedin.com/in/elyas-boumejjane-47b2b476",
   years_of_experience: 2,
   )
+
+  # Damon
+
+  damon = User.create!(
+  email: Faker::Internet.email,
+  job_title: "#{Faker::Company.profession} #{titles.sample}",
+  first_name: "Damon",
+  last_name: "Arts",
+  birth_date: Faker::Date.between(42.years.ago, 20.years.ago),
+  street: "Nassaukade 307",
+  city: "Amsterdam",
+  password: "lewagon",
+  password_confirmation: "lewagon",
+  photo: File.open(Rails.root.join("db/seeds/images/damon.jpg"))
+  )
+
+damon.create_resume!(
+  phone: Faker::PhoneNumber.phone_number,
+  summary: "Great musicaian and artist from NZ and living in Amsterdam",
+  linkedin: "https://www.linkedin.com/in/elyas-boumejjane-47b2b476",
+  years_of_experience: 2,
+  )
+
+# Damein
+
+  daemien = User.create!(
+  email: Faker::Internet.email,
+  job_title: "#{Faker::Company.profession} #{titles.sample}",
+  first_name: "Daemien",
+  last_name: "Ho",
+  birth_date: Faker::Date.between(42.years.ago, 20.years.ago),
+  street: "Nassaukade 307",
+  city: "Amsterdam",
+  password: "lewagon",
+  password_confirmation: "lewagon",
+  photo: File.open(Rails.root.join("db/seeds/images/daemien.jpg"))
+  )
+
+daemien.create_resume!(
+  phone: Faker::PhoneNumber.phone_number,
+  summary: "I am a Junior develor in Ruby on Rails and working towards mastering this skill.",
+  linkedin: "https://www.linkedin.com/in/elyas-boumejjane-47b2b476",
+  years_of_experience: 2,
+  )
+
+
+  # Bill
+
+  bill = User.create!(
+  email: Faker::Internet.email,
+  job_title: "#{Faker::Company.profession} #{titles.sample}",
+  first_name: "Bill",
+  last_name: "Gates",
+  birth_date: Faker::Date.between(42.years.ago, 20.years.ago),
+  street: "Nassaukade 307",
+  city: "Amsterdam",
+  password: "lewagon",
+  password_confirmation: "lewagon",
+  photo: File.open(Rails.root.join("db/seeds/images/bill.jpg"))
+  )
+
+  bill.create_resume!(
+  phone: Faker::PhoneNumber.phone_number,
+  summary: "I am the world's richest man for a long time and I love Ruby and you should too.",
+  linkedin: "https://www.linkedin.com/in/elyas-boumejjane-47b2b476",
+  years_of_experience: 2,
+  )
+
+
 
 ########################################
 #
