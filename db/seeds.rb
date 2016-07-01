@@ -105,6 +105,20 @@ rails_coach.job_skills.create!(skill: Skill.find_by_name("Ruby"))
 rails_coach.job_skills.create!(skill: Skill.find_by_name("Back-end"))
 rails_coach.job_skills.create!(skill: Skill.find_by_name("Ruby on Rails"))
 
+rails_coach = lewagon.jobs.create!(
+  job_title: "Ruby on Rails teacher",
+  salary: "3000",
+  location: "Amsterdam",
+  description: "The right candidate will be a talented Ruby on Rails Developer
+  who has a passion for programming, possesses a good understanding of agile practices, and desire to join a team of exceptional developers
+  working in a fast-paced environment to deliver first-class software."
+  )
+
+rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("back-end"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby on rails"))
+
+
 
 rails_coach = lewagon.jobs.create!(
   job_title: "Ruby on Rails front-end developer",
@@ -136,7 +150,7 @@ rails_coach.job_skills.create!(skill: Skill.find_by_name("Ruby on Rails"))
 
 rails_coach = lewagon.jobs.create!(
   job_title: "Junior web developer",
-  salary: "4000",
+  salary: "6000",
   location: "Amsterdam",
   description: "The right candidate will be a talented Ruby on Rails Developer
   who has a passion for programming, possesses a good understanding of agile practices, and desire to join a team of exceptional developers
@@ -147,7 +161,19 @@ rails_coach.job_skills.create!(skill: Skill.find_by_name("Ruby"))
 rails_coach.job_skills.create!(skill: Skill.find_by_name("Back-end"))
 rails_coach.job_skills.create!(skill: Skill.find_by_name("Ruby on Rails"))
 
+rails_coach = lewagon.jobs.create!(
+  job_title: "Junior web developer",
+  salary: "6000",
+  location: "Amsterdam",
+  description: "The right candidate will be a talented Ruby on Rails Developer
+  who has a passion for programming, possesses a good understanding of agile practices, and desire to join a team of exceptional developers
+  working in a fast-paced environment to deliver first-class software."
+  )
 
+rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("back-end"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby on rails"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("CSS"))
 
 
 
@@ -162,6 +188,22 @@ frontend_coach = lewagon.jobs.create!(
 frontend_coach.job_skills.create!(skill: Skill.find_by_name("HTML"))
 frontend_coach.job_skills.create!(skill: Skill.find_by_name("CSS"))
 frontend_coach.job_skills.create!(skill: Skill.find_by_name("Javascript"))
+
+
+frontend_coach = lewagon.jobs.create!(
+  job_title: "Front-end Master",
+  salary: "7000",
+  location: "Amsterdam",
+  description: "Should be creative, creative and creative!"
+
+  )
+
+frontend_coach.job_skills.create!(skill: Skill.find_by_name("HTML"))
+frontend_coach.job_skills.create!(skill: Skill.find_by_name("CSS"))
+frontend_coach.job_skills.create!(skill: Skill.find_by_name("javascript"))
+
+
+
 
 backend_dev = springest.jobs.create!(
   job_title: "Back-end Ruby on Rails developer",
