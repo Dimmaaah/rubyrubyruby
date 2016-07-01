@@ -55,7 +55,8 @@ lewagon = Employer.create!(
   password: "lewagon",
   password_confirmation: "lewagon"
   )
-Kpn = Employer.create!(
+
+kpn = Employer.create!(
   company_name: "Kpn",
   first_name: "Banne",
   last_name: "Bollet",
@@ -68,11 +69,6 @@ Kpn = Employer.create!(
   password: "lewagon",
   password_confirmation: "lewagon"
   )
-
-
-
-
-
 
 springest = Employer.create!(
   company_name: "Springest",
@@ -105,9 +101,9 @@ rails_coach = lewagon.jobs.create!(
   working in a fast-paced environment to deliver first-class software."
   )
 
-rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby"))
-rails_coach.job_skills.create!(skill: Skill.find_by_name("back-end"))
-rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby on rails"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("Ruby"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("Back-end"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("Ruby on Rails"))
 
 
 rails_coach = lewagon.jobs.create!(
@@ -119,9 +115,9 @@ rails_coach = lewagon.jobs.create!(
   working in a fast-paced environment to deliver first-class software."
   )
 
-rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby"))
-rails_coach.job_skills.create!(skill: Skill.find_by_name("back-end"))
-rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby on rails"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("Ruby"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("Back-end"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("Ruby on Rails"))
 
 
 rails_coach = lewagon.jobs.create!(
@@ -133,9 +129,9 @@ rails_coach = lewagon.jobs.create!(
   working in a fast-paced environment to deliver first-class software."
   )
 
-rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby"))
-rails_coach.job_skills.create!(skill: Skill.find_by_name("back-end"))
-rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby on rails"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("Ruby"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("Back-end"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("Ruby on Rails"))
 
 
 rails_coach = lewagon.jobs.create!(
@@ -147,9 +143,9 @@ rails_coach = lewagon.jobs.create!(
   working in a fast-paced environment to deliver first-class software."
   )
 
-rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby"))
-rails_coach.job_skills.create!(skill: Skill.find_by_name("back-end"))
-rails_coach.job_skills.create!(skill: Skill.find_by_name("ruby on rails"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("Ruby"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("Back-end"))
+rails_coach.job_skills.create!(skill: Skill.find_by_name("Ruby on Rails"))
 
 
 
@@ -165,7 +161,7 @@ frontend_coach = lewagon.jobs.create!(
 
 frontend_coach.job_skills.create!(skill: Skill.find_by_name("HTML"))
 frontend_coach.job_skills.create!(skill: Skill.find_by_name("CSS"))
-frontend_coach.job_skills.create!(skill: Skill.find_by_name("javascript"))
+frontend_coach.job_skills.create!(skill: Skill.find_by_name("Javascript"))
 
 backend_dev = springest.jobs.create!(
   job_title: "Back-end Ruby on Rails developer",
@@ -174,9 +170,9 @@ backend_dev = springest.jobs.create!(
   description: "Should be creative and have 5 years of experience"
   )
 
-backend_dev.job_skills.create!(skill: Skill.find_by_name("ruby"))
-backend_dev.job_skills.create!(skill: Skill.find_by_name("back-end"))
-backend_dev.job_skills.create!(skill: Skill.find_by_name("ruby on rails"))
+backend_dev.job_skills.create!(skill: Skill.find_by_name("Ruby"))
+backend_dev.job_skills.create!(skill: Skill.find_by_name("Back-end"))
+backend_dev.job_skills.create!(skill: Skill.find_by_name("Ruby on Rails"))
 
 ########################################
 #
@@ -299,9 +295,9 @@ elyas.create_resume!(
   years_of_experience: 2,
   )
 
-  # Damon
+# Damon
 
-  damon = User.create!(
+damon = User.create!(
   email: Faker::Internet.email,
   job_title: "#{Faker::Company.profession} #{titles.sample}",
   first_name: "Damon",
@@ -323,25 +319,25 @@ damon.create_resume!(
 
 # Damein
 
-  daemien = User.create!(
-  email: Faker::Internet.email,
-  job_title: "#{Faker::Company.profession} #{titles.sample}",
-  first_name: "Daemien",
-  last_name: "Ho",
-  birth_date: Faker::Date.between(42.years.ago, 20.years.ago),
-  street: "Nassaukade 307",
-  city: "Amsterdam",
-  password: "lewagon",
-  password_confirmation: "lewagon",
-  photo: File.open(Rails.root.join("db/seeds/images/daemien.jpg"))
-  )
+# daemien = User.create!(
+#   email: Faker::Internet.email,
+#   job_title: "#{Faker::Company.profession} #{titles.sample}",
+#   first_name: "Daemien",
+#   last_name: "Ho",
+#   birth_date: Faker::Date.between(42.years.ago, 20.years.ago),
+#   street: "Nassaukade 307",
+#   city: "Amsterdam",
+#   password: "lewagon",
+#   password_confirmation: "lewagon",
+#   photo: File.open(Rails.root.join("db/seeds/images/daemien.jpg"))
+#   )
 
-daemien.create_resume!(
-  phone: Faker::PhoneNumber.phone_number,
-  summary: "I am a Junior develor in Ruby on Rails and working towards mastering this skill.",
-  linkedin: "https://www.linkedin.com/in/elyas-boumejjane-47b2b476",
-  years_of_experience: 2,
-  )
+# daemien.create_resume!(
+#   phone: Faker::PhoneNumber.phone_number,
+#   summary: "I am a Junior develor in Ruby on Rails and working towards mastering this skill.",
+#   linkedin: "https://www.linkedin.com/in/elyas-boumejjane-47b2b476",
+#   years_of_experience: 2,
+#   )
 
 
   # Bill
