@@ -19,6 +19,7 @@ Job.destroy_all
 Post.destroy_all
 User.destroy_all
 Skill.destroy_all
+Post.destroy_all
 
 ########################################
 #
@@ -318,7 +319,7 @@ vallentino.create_resume!(
 # Elyas
 
 elyas = User.create!(
-  email: Faker::Internet.email,
+  email: "elyas@hotmail.com",
   job_title: "#{Faker::Company.profession} #{titles.sample}",
   first_name: "Elyas",
   last_name: "Boumejjane",
@@ -456,3 +457,55 @@ User.all.each do |user|
       )
   end
 end
+
+
+########################################
+#
+# TICKETS
+#
+# ########################################
+
+puts "Creating tickets..."
+
+Post.create!(
+  title: "How to get Live video feeds on my app project ?",
+  content: "Hi guys, I am a student at the Batch25 in Amsterdam. I am doing some brainstorming for the project and i am looking for technical help.",
+  user: umer
+)
+
+Post.create!(
+  title: "Import your Heroku DB locally",
+  content: "I tired this: heroku pg:backups capture --remote production --app [app_name]. Can someone help?",
+  user: samy
+)
+
+Post.create!(
+  title: "Viewport to reduce page load",
+  content: "Hi im trying to implement a viewport design to reduce page load whilst displaying 40-100 compressed and looped videos on a site backed by rails.",
+  user: mike
+)
+
+Post.create!(
+  title: "Issue With Gmaps4rails and Heroku",
+  content: "When i push it on heroku chrome display : Uncaught RangeError: Maximum call stack size exceeded.",
+  user: vallentino
+)
+
+# Post.create!(
+#   title: "",
+#   content: "",
+#   user: elyas
+# )
+
+# Post.create!(
+#   title: "",
+#   content: "",
+#   user: damon
+# )
+
+# Post.create!(
+#   title: "",
+#   content: "",
+#   user: bill
+# )
+
