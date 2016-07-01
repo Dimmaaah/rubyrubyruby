@@ -9,14 +9,22 @@
 
       <div class="card jobs-card">
 
-        <h3 class="jobs-title"><%= application.user.first_name.capitalize %>
-          <%= application.user.last_name.capitalize %></h3>
+        <h3 class="jobs-title">
+          <%= link_to developer_path(application.user) do %>
+            <%= application.user.first_name.capitalize %>
+            <%= application.user.last_name.capitalize %>
+          <% end %>
+        </h3>
           <br>
           <%= application.user.email %>
           <br>
           <%= application.description %>
           <br>
-          <a href="<%= application.user.resume.photo %>" class="navbar-wagon-button btn" target="_blank">Resume</a>
+          <% if application.user.resume.photo.present? %>
+            <a href="<%= application.user.resume.photo %>" class="navbar-wagon-button btn" target="_blank">Resume</a>
+          <% else %>
+            <%= link_to "Resume", developer_path(application.user), class: "navbar-wagon-button btn", target: "_blank" %>
+          <% end %>
 
         </div>
 
